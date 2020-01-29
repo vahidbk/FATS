@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/Boors/DB
+/DB
+/DicListTemp.json
+/LoginData.json
+/ImportantDatas
+/all
