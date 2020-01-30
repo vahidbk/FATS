@@ -77,11 +77,34 @@ def getDataTable(soup):
             dataTable.append(dataRow)
     return dataTable
 
+def getListOfSoratHayeMali(soup):
+    select = soup.find('select', attrs={'id':'ddlTable'})
+    optionData={}
+    if (select):
+        options = select.find_all('option')
+        for option in options:
+            value = option['value']
+            text = option.get_text(strip=True, separator=',').replace("\n", "")
+            optionData[text]=value
+    return optionData
+
+def listOfSoratHayeMaliToJson(table, chrome, url, title, tracingNo, symbol, companyName, sentDateTime):
+    pageSource = chrome.loadURLByTrackingNoOffline(symbol, url, tracingNo, 1)
+    soup = BeautifulSoup(pageSource,"lxml")
+    try:
+        listOfSoratHayeMali=getListOfSoratHayeMali(soup)
+        data={"TracingNo":tracingNo, "Title": title, "SentDateTime":sentDateTime, "Symbol":symbol, "CompanyName":companyName, \
+              "listOfSoratHayeMali":listOfSoratHayeMali}
+        table.insert(data)
+    except:
+        print(f'Error listOfSoratHayeMali Comment: {err}') 
+
 
 def SodAndZianUrlToJson(table, chrome, url, title, tracingNo, symbol, companyName, sentDateTime):
     pageSource = chrome.loadURLByTrackingNoOffline(symbol, url, tracingNo, 1)
     
     soup = BeautifulSoup(pageSource,"lxml")
+        
     try:
         titles=getTitle(soup)
         dataTable=getDataTable(soup)
@@ -90,8 +113,10 @@ def SodAndZianUrlToJson(table, chrome, url, title, tracingNo, symbol, companyNam
         table.insert(data)
     except Exception as err:
         print("Error In TrackingNo:"+str(tracingNo)+", Symbol:"+persianToFinglish(symbol))
-        print(f'Error Comment: {err}') 
+        print(f'Error SodAndZianUrlToJson Comment: {err}') 
 
+#Todo use group callback to travers over data
+#Todo extract list of SoratHaye mali from sod and zian
     
 def updateCodalSavePages(start, end):
     chrome = Chrome(False)
@@ -117,26 +142,25 @@ def updateCodalSavePages(start, end):
         print("------"+persianToFinglish(symbol['sy']))        
         if not (symbol['GroupName']=='Unknown' or symbol['st']==2 or symbol['st']==3):
             
-            
-            
-            
             db = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalLinks,'symbol':symbol['sy']}))
             LinkOfPagesTable = db.table('Links')
             LinkOfPages=LinkOfPagesTable.all()
-            codalRawDataDB = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalRawData,'symbol':symbol['sy']}))
-            SodAndZianTable = codalRawDataDB.table('SodAndZian')
             
-            SodAndZianLinkOfPages = []
+            SoratMaliLinkOfPages = []
             for linkOfPage in LinkOfPages:
                 title=linkOfPage['letter']['Title']
                 if (title.find("صورت‌های مالی")>-1):
-                    SodAndZianLinkOfPages.append(linkOfPage)
+                    SoratMaliLinkOfPages.append(linkOfPage)
+
+            codalRawDataDB = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalRawData,'symbol':symbol['sy']}))
+            SodAndZianTable = codalRawDataDB.table('SodAndZian')
+            listOfSoratHayeMaliTable = codalRawDataDB.table('ListOfSoratHayeMali')
             
             sodAndZianTableData = SodAndZianTable.all()
             sodAndZianTableDataLen = len(sodAndZianTableData)
             linkOfPageCounter=0
-            for linkOfPage in SodAndZianLinkOfPages:
-                if (len(SodAndZianLinkOfPages)<=sodAndZianTableDataLen):
+            for linkOfPage in SoratMaliLinkOfPages:
+                if (len(SoratMaliLinkOfPages)<=sodAndZianTableDataLen):
                     break;
                 isFind=False
                 for sodAndZianData in sodAndZianTableData:
@@ -145,7 +169,12 @@ def updateCodalSavePages(start, end):
                         break
                 if not (isFind):
                     url = "https://www.codal.ir"+linkOfPage['letter']['Url']+"&sheetId=1"
-                    print(str(linkOfPageCounter)+"/"+str(len(SodAndZianLinkOfPages)), end="\r", flush=True)
+
+                    print(str(linkOfPageCounter)+"/"+str(len(SoratMaliLinkOfPages)), end="\r", flush=True)
+
+                    listOfSoratHayeMaliToJson(listOfSoratHayeMaliTable, chrome, url, linkOfPage['letter']['Title'], linkOfPage['letter']['TracingNo']\
+                    , linkOfPage['letter']['Symbol'], linkOfPage['letter']['CompanyName'], linkOfPage['letter']['SentDateTime'])
+
                     SodAndZianUrlToJson(SodAndZianTable, chrome, url, linkOfPage['letter']['Title'], linkOfPage['letter']['TracingNo']\
                                         , linkOfPage['letter']['Symbol'], linkOfPage['letter']['CompanyName'], linkOfPage['letter']['SentDateTime'])
                     sodAndZianTableDataLen+=1

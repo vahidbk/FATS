@@ -1,0 +1,3167 @@
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "WebInspector",
+      "version": "537.36"
+    },
+    "pages": [],
+    "entries": [
+      {
+        "startedDateTime": "2020-01-29T19:05:27.561Z",
+        "time": 84.41700000184937,
+        "request": {
+          "method": "OPTIONS",
+          "url": "https://d11.emofid.com/easy/api/OmsOrder",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "d11.emofid.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Access-Control-Request-Method",
+              "value": "POST"
+            },
+            {
+              "name": "Origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+            },
+            {
+              "name": "Access-Control-Request-Headers",
+              "value": "authorization,content-type"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Referer",
+              "value": "https://d.easytrader.emofid.com/"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": 523,
+          "bodySize": 0
+        },
+        "response": {
+          "status": 204,
+          "statusText": "No Content",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 29 Jan 2020 19:05:26 GMT"
+            },
+            {
+              "name": "vary",
+              "value": "Origin"
+            },
+            {
+              "name": "access-control-allow-headers",
+              "value": "authorization,content-type"
+            },
+            {
+              "name": "access-control-allow-methods",
+              "value": "POST"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "x-envoy-upstream-service-time",
+              "value": "1"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "TS01195783=01bc7673167b51881f876aa75517b8cd16c8bce7d1e3805e8eee4219ee0a46ed7ccac817f3c5a51c620d90dc6402b077f94c87d3f3; Path=/"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "TS01195783",
+              "value": "01bc7673167b51881f876aa75517b8cd16c8bce7d1e3805e8eee4219ee0a46ed7ccac817f3c5a51c620d90dc6402b077f94c87d3f3",
+              "path": "/",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            }
+          ],
+          "content": {
+            "size": 0,
+            "mimeType": "text/plain",
+            "compression": 0
+          },
+          "redirectURL": "",
+          "headersSize": 407,
+          "bodySize": 0,
+          "_transferSize": 407
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 4.549000000771601,
+          "dns": -1,
+          "ssl": -1,
+          "connect": -1,
+          "send": 0.15799999999999992,
+          "wait": 78.25599999997392,
+          "receive": 1.45400000110385,
+          "_blocked_queueing": 2.2160000007716008
+        },
+        "serverIPAddress": "193.34.246.31",
+        "_initiator": {
+          "type": "script",
+          "stack": {
+            "callFrames": [
+              {
+                "functionName": "k",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 35727
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6774
+              },
+              {
+                "functionName": "onScheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 4096
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6673
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 3071
+              },
+              {
+                "functionName": "scheduleMacroTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 3380
+              },
+              {
+                "functionName": "g",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 15054
+              },
+              {
+                "functionName": "",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 36141
+              },
+              {
+                "functionName": "s.<computed>",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 17902
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1824784
+              },
+              {
+                "functionName": "_trySubscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683384
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683192
+              },
+              {
+                "functionName": "s",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2801417
+              },
+              {
+                "functionName": "_innerSub",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596728
+              },
+              {
+                "functionName": "_tryNext",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596623
+              },
+              {
+                "functionName": "_next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596462
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 781816
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4546377
+              },
+              {
+                "functionName": "_trySubscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683384
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683192
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596201
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4583181
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4453632
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1841413
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "createOrder",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2933808
+              },
+              {
+                "functionName": "pushAndSendOrder",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3040887
+              },
+              {
+                "functionName": "buyOrSellBtn",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3033847
+              },
+              {
+                "functionName": "onBuyOrSellBtnClicked",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3033679
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3837975
+              },
+              {
+                "functionName": "handleEvent",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1056084
+              },
+              {
+                "functionName": "handleEvent",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1067484
+              },
+              {
+                "functionName": "$p",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 971377
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 986728
+              },
+              {
+                "functionName": "i",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1008020
+              },
+              {
+                "functionName": "__tryOrUnsub",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 783650
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 782871
+              },
+              {
+                "functionName": "_next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 782042
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 781816
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2702180
+              },
+              {
+                "functionName": "emit",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1007672
+              },
+              {
+                "functionName": "onSubmit",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4742852
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3837878
+              },
+              {
+                "functionName": "handleEvent",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1056084
+              },
+              {
+                "functionName": "handleEvent",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1067484
+              },
+              {
+                "functionName": "$p",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 971377
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1049409
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3326640
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 7011
+              },
+              {
+                "functionName": "onInvokeTask",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1028878
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6932
+              },
+              {
+                "functionName": "runTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 2517
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 8012
+              },
+              {
+                "functionName": "y",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 19983
+              },
+              {
+                "functionName": "k",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 20225
+              }
+            ]
+          }
+        },
+        "_priority": "High",
+        "_resourceType": "xhr",
+        "connection": "55168"
+      },
+      {
+        "startedDateTime": "2020-01-29T19:05:27.647Z",
+        "time": 140.32700000097975,
+        "request": {
+          "method": "POST",
+          "url": "https://d11.emofid.com/easy/api/OmsOrder",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "d11.emofid.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Content-Length",
+              "value": "212"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json, text/plain, */*"
+            },
+            {
+              "name": "Origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjllZjJmNDQ5MDk3NjljZjdjMmFiMjdlYWNmZTI0NzE4IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1ODAzMDcwMzksImV4cCI6MTU4MDMyODYzOSwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50LmVtb2ZpZC5jb20iLCJhdWQiOlsiaHR0cHM6Ly9hY2NvdW50LmVtb2ZpZC5jb20vcmVzb3VyY2VzIiwiZWFzeTJfYXBpIl0sImNsaWVudF9pZCI6ImVhc3kyX2NsaWVudCIsInN1YiI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsImF1dGhfdGltZSI6MTU4MDMwNzAyMywiaWRwIjoibG9jYWwiLCJwayI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsInR3b19mYWN0b3JfZW5hYmxlZCI6ImZhbHNlIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiM2U2ZmEzYzYtZGU4OC00ZTI4LWIxNzItOGQ2ZjMxMGY5YTk0IiwibmFtZSI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsInBob25lX251bWJlciI6IjA5MzY0Mjk5MDE0IiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjp0cnVlLCJuYXRpb25hbF9pZCI6IjA5MzgxNzQzOTgiLCJuYXRpb25hbF9pZF92ZXJpZmllZCI6InRydWUiLCJjdXN0b21lcl9pc2luIjoiMTEyOTA5MzgxNzQzOTgiLCJzY29wZSI6WyJvcGVuaWQiLCJlYXN5Ml9hcGkiXSwiYW1yIjpbInB3ZCJdfQ.HK29QfVBfKUhuoG9NO24EZ4-ktZwWM_QtM2vwQdYXsI-YSr9P8KRVVBauYTXSF0ed5fa4HppFb598ZGgw6ZbpTKFwEJw6gf_vXa5954cnVm4S4VzbLp9cgBN0sz8hu7jgkuB7ITVnhIbmhYuaGzKQwBHLbQC8pHg7p8Ij5XPRwOiPFn2BFpJRbJZ-OLKDK_5NDQuhS0IoKy0JVAp4ZukP9C6eKYBTalt6gJmCLusTsD6z9LhfBK199Y7aux3sROiROQITrH1XJjkjAl_3iAqAooUozj22E4VhLzKg3auakIheLyEq_BtPbgaKODIlOpWgdATHOyxeAeWrFZeXV2Xeg"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Referer",
+              "value": "https://d.easytrader.emofid.com/"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": 1779,
+          "bodySize": 212,
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"isin\":\"IRO1SORB0001\",\"financeId\":1,\"quantity\":10000,\"price\":32656,\"side\":0,\"validityType\":30,\"validityDateJalali\":\"1398/11/9\",\"easySource\":1,\"referenceKey\":\"82b9bd0c-28a9-4ae3-b709-8a3403978719\",\"iceberg\":3000}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 29 Jan 2020 19:05:26 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "content-encoding",
+              "value": "br"
+            },
+            {
+              "name": "vary",
+              "value": "Origin,Accept-Encoding,Origin"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "x-envoy-upstream-service-time",
+              "value": "28"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "TS01195783=01bc76731667aefaa5a13d839d96a58e57969e158a5c15e9ba16fd5d1a656ffe76bb78e2215c611cf81162eb8950596a95220baa2a; Path=/"
+            },
+            {
+              "name": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "TS01195783",
+              "value": "01bc76731667aefaa5a13d839d96a58e57969e158a5c15e9ba16fd5d1a656ffe76bb78e2215c611cf81162eb8950596a95220baa2a",
+              "path": "/",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            }
+          ],
+          "content": {
+            "size": 172,
+            "mimeType": "application/json",
+            "compression": 0
+          },
+          "redirectURL": "",
+          "headersSize": 426,
+          "bodySize": 172,
+          "_transferSize": 598
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 3.2420000035555567,
+          "dns": -1,
+          "ssl": -1,
+          "connect": -1,
+          "send": 0.21100000000000008,
+          "wait": 134.80900000047777,
+          "receive": 2.064999996946426,
+          "_blocked_queueing": 2.1490000035555568
+        },
+        "serverIPAddress": "193.34.246.31",
+        "_initiator": {
+          "type": "other"
+        },
+        "_priority": "High",
+        "_resourceType": "xhr",
+        "connection": "55168"
+      },
+      {
+        "startedDateTime": "2020-01-29T19:08:55.862Z",
+        "time": 83.1770000004326,
+        "request": {
+          "method": "OPTIONS",
+          "url": "https://d11.emofid.com/easy/api/MarketData/GetSymbolDetailsData/IRO1SORB0001/header",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "d11.emofid.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Access-Control-Request-Method",
+              "value": "GET"
+            },
+            {
+              "name": "Origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+            },
+            {
+              "name": "Access-Control-Request-Headers",
+              "value": "authorization"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Referer",
+              "value": "https://d.easytrader.emofid.com/"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": 552,
+          "bodySize": 0
+        },
+        "response": {
+          "status": 204,
+          "statusText": "No Content",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 29 Jan 2020 19:08:54 GMT"
+            },
+            {
+              "name": "vary",
+              "value": "Origin"
+            },
+            {
+              "name": "access-control-allow-headers",
+              "value": "authorization"
+            },
+            {
+              "name": "access-control-allow-methods",
+              "value": "GET"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "x-envoy-upstream-service-time",
+              "value": "1"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "TS01195783=01bc7673163c4408b8366262fb6b9e8b84aa654424437030c6d6430e93e920f6396ed7b9bac9de9aadba3290ee21197a15953b9e74; Path=/"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "TS01195783",
+              "value": "01bc7673163c4408b8366262fb6b9e8b84aa654424437030c6d6430e93e920f6396ed7b9bac9de9aadba3290ee21197a15953b9e74",
+              "path": "/",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            }
+          ],
+          "content": {
+            "size": 0,
+            "mimeType": "text/plain",
+            "compression": 0
+          },
+          "redirectURL": "",
+          "headersSize": 393,
+          "bodySize": 0,
+          "_transferSize": 393
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 5.417999999164836,
+          "dns": -1,
+          "ssl": -1,
+          "connect": -1,
+          "send": 0.7469999999999999,
+          "wait": 75.7269999991688,
+          "receive": 1.2850000020989683,
+          "_blocked_queueing": 2.2219999991648365
+        },
+        "serverIPAddress": "193.34.246.31",
+        "_initiator": {
+          "type": "script",
+          "stack": {
+            "callFrames": [
+              {
+                "functionName": "k",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 35727
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6774
+              },
+              {
+                "functionName": "onScheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 4096
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6673
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 3071
+              },
+              {
+                "functionName": "scheduleMacroTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 3380
+              },
+              {
+                "functionName": "g",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 15054
+              },
+              {
+                "functionName": "",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 36141
+              },
+              {
+                "functionName": "s.<computed>",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 17902
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1824784
+              },
+              {
+                "functionName": "_trySubscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683384
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683192
+              },
+              {
+                "functionName": "s",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2801417
+              },
+              {
+                "functionName": "_innerSub",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596728
+              },
+              {
+                "functionName": "_tryNext",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596623
+              },
+              {
+                "functionName": "_next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596462
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 781816
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4546377
+              },
+              {
+                "functionName": "_trySubscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683384
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683192
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596201
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4583181
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4453632
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1857472
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "getStockDetailsMarketData",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3054388
+              },
+              {
+                "functionName": "init",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3053063
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3052978
+              },
+              {
+                "functionName": "_next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4907345
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 781816
+              },
+              {
+                "functionName": "debouncedNext",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2003042
+              },
+              {
+                "functionName": "a",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2003194
+              },
+              {
+                "functionName": "_execute",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 251427
+              },
+              {
+                "functionName": "execute",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 251265
+              },
+              {
+                "functionName": "flush",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1830029
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 7011
+              },
+              {
+                "functionName": "onInvokeTask",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1028878
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6932
+              },
+              {
+                "functionName": "runTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 2517
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 8012
+              },
+              {
+                "functionName": "invoke",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 7914
+              },
+              {
+                "functionName": "n.args.<computed>",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 31950
+              }
+            ],
+            "parent": {
+              "description": "setInterval",
+              "callFrames": [
+                {
+                  "functionName": "a",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 32107
+                },
+                {
+                  "functionName": "scheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 6774
+                },
+                {
+                  "functionName": "onScheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4096
+                },
+                {
+                  "functionName": "scheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 6673
+                },
+                {
+                  "functionName": "scheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 3071
+                },
+                {
+                  "functionName": "scheduleMacroTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 3380
+                },
+                {
+                  "functionName": "g",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 15054
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 32230
+                },
+                {
+                  "functionName": "s.<computed>",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 17902
+                },
+                {
+                  "functionName": "requestAsyncId",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 251026
+                },
+                {
+                  "functionName": "schedule",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 250962
+                },
+                {
+                  "functionName": "schedule",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2732902
+                },
+                {
+                  "functionName": "schedule",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1829914
+                },
+                {
+                  "functionName": "_next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2002817
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 781816
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2702180
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 201006
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2921034
+                },
+                {
+                  "functionName": "_next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4907345
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 781816
+                },
+                {
+                  "functionName": "_subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 200873
+                },
+                {
+                  "functionName": "_trySubscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683384
+                },
+                {
+                  "functionName": "_trySubscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2702677
+                },
+                {
+                  "functionName": "subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683192
+                },
+                {
+                  "functionName": "_subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683700
+                },
+                {
+                  "functionName": "subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683173
+                },
+                {
+                  "functionName": "call",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4906935
+                },
+                {
+                  "functionName": "subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683070
+                },
+                {
+                  "functionName": "set activeStockIsin",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2921073
+                },
+                {
+                  "functionName": "onItemClicked",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 5704466
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 5713085
+                },
+                {
+                  "functionName": "handleEvent",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1056084
+                },
+                {
+                  "functionName": "handleEvent",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1067484
+                },
+                {
+                  "functionName": "$p",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 971377
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1049409
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 3326640
+                },
+                {
+                  "functionName": "invokeTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 7011
+                },
+                {
+                  "functionName": "onInvokeTask",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1028878
+                },
+                {
+                  "functionName": "invokeTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 6932
+                },
+                {
+                  "functionName": "runTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2517
+                },
+                {
+                  "functionName": "invokeTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 8012
+                },
+                {
+                  "functionName": "y",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 19983
+                },
+                {
+                  "functionName": "k",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 20225
+                }
+              ]
+            }
+          }
+        },
+        "_priority": "High",
+        "_resourceType": "xhr",
+        "connection": "55168"
+      },
+      {
+        "startedDateTime": "2020-01-29T19:08:55.947Z",
+        "time": 492.776999999478,
+        "request": {
+          "method": "GET",
+          "url": "https://d11.emofid.com/easy/api/MarketData/GetSymbolDetailsData/IRO1SORB0001/header",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "d11.emofid.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json, text/plain, */*"
+            },
+            {
+              "name": "Origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjllZjJmNDQ5MDk3NjljZjdjMmFiMjdlYWNmZTI0NzE4IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1ODAzMDcwMzksImV4cCI6MTU4MDMyODYzOSwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50LmVtb2ZpZC5jb20iLCJhdWQiOlsiaHR0cHM6Ly9hY2NvdW50LmVtb2ZpZC5jb20vcmVzb3VyY2VzIiwiZWFzeTJfYXBpIl0sImNsaWVudF9pZCI6ImVhc3kyX2NsaWVudCIsInN1YiI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsImF1dGhfdGltZSI6MTU4MDMwNzAyMywiaWRwIjoibG9jYWwiLCJwayI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsInR3b19mYWN0b3JfZW5hYmxlZCI6ImZhbHNlIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiM2U2ZmEzYzYtZGU4OC00ZTI4LWIxNzItOGQ2ZjMxMGY5YTk0IiwibmFtZSI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsInBob25lX251bWJlciI6IjA5MzY0Mjk5MDE0IiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjp0cnVlLCJuYXRpb25hbF9pZCI6IjA5MzgxNzQzOTgiLCJuYXRpb25hbF9pZF92ZXJpZmllZCI6InRydWUiLCJjdXN0b21lcl9pc2luIjoiMTEyOTA5MzgxNzQzOTgiLCJzY29wZSI6WyJvcGVuaWQiLCJlYXN5Ml9hcGkiXSwiYW1yIjpbInB3ZCJdfQ.HK29QfVBfKUhuoG9NO24EZ4-ktZwWM_QtM2vwQdYXsI-YSr9P8KRVVBauYTXSF0ed5fa4HppFb598ZGgw6ZbpTKFwEJw6gf_vXa5954cnVm4S4VzbLp9cgBN0sz8hu7jgkuB7ITVnhIbmhYuaGzKQwBHLbQC8pHg7p8Ij5XPRwOiPFn2BFpJRbJZ-OLKDK_5NDQuhS0IoKy0JVAp4ZukP9C6eKYBTalt6gJmCLusTsD6z9LhfBK199Y7aux3sROiROQITrH1XJjkjAl_3iAqAooUozj22E4VhLzKg3auakIheLyEq_BtPbgaKODIlOpWgdATHOyxeAeWrFZeXV2Xeg"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Referer",
+              "value": "https://d.easytrader.emofid.com/"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": 1768,
+          "bodySize": 0
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 29 Jan 2020 19:08:54 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "content-encoding",
+              "value": "br"
+            },
+            {
+              "name": "vary",
+              "value": "Origin,Accept-Encoding,Origin"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "x-envoy-upstream-service-time",
+              "value": "12"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "TS01195783=01bc76731609917ae304ac3c924006bbacf3bb836bbb24e532359337258d42010f43d9354de2f26df7deb68c6ce8501ef3b5110c7c; Path=/"
+            },
+            {
+              "name": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "TS01195783",
+              "value": "01bc76731609917ae304ac3c924006bbacf3bb836bbb24e532359337258d42010f43d9354de2f26df7deb68c6ce8501ef3b5110c7c",
+              "path": "/",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            }
+          ],
+          "content": {
+            "size": 294,
+            "mimeType": "application/json",
+            "compression": 13
+          },
+          "redirectURL": "",
+          "headersSize": 426,
+          "bodySize": 281,
+          "_transferSize": 707
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 236.54999999990733,
+          "dns": -1,
+          "ssl": -1,
+          "connect": -1,
+          "send": 1,
+          "wait": 253.20100000127522,
+          "receive": 2.025999998295447,
+          "_blocked_queueing": 2.0629999999073334
+        },
+        "serverIPAddress": "193.34.246.31",
+        "_initiator": {
+          "type": "other"
+        },
+        "_priority": "High",
+        "_resourceType": "xhr",
+        "connection": "55168"
+      },
+      {
+        "startedDateTime": "2020-01-29T19:08:57.719Z",
+        "time": 120.89600000035716,
+        "request": {
+          "method": "GET",
+          "url": "https://d11.emofid.com/easy/api/MarketData/GetSymbolDetailsData/IRO1SORB0001/header",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "d11.emofid.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json, text/plain, */*"
+            },
+            {
+              "name": "Origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjllZjJmNDQ5MDk3NjljZjdjMmFiMjdlYWNmZTI0NzE4IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1ODAzMDcwMzksImV4cCI6MTU4MDMyODYzOSwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50LmVtb2ZpZC5jb20iLCJhdWQiOlsiaHR0cHM6Ly9hY2NvdW50LmVtb2ZpZC5jb20vcmVzb3VyY2VzIiwiZWFzeTJfYXBpIl0sImNsaWVudF9pZCI6ImVhc3kyX2NsaWVudCIsInN1YiI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsImF1dGhfdGltZSI6MTU4MDMwNzAyMywiaWRwIjoibG9jYWwiLCJwayI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsInR3b19mYWN0b3JfZW5hYmxlZCI6ImZhbHNlIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiM2U2ZmEzYzYtZGU4OC00ZTI4LWIxNzItOGQ2ZjMxMGY5YTk0IiwibmFtZSI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsInBob25lX251bWJlciI6IjA5MzY0Mjk5MDE0IiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjp0cnVlLCJuYXRpb25hbF9pZCI6IjA5MzgxNzQzOTgiLCJuYXRpb25hbF9pZF92ZXJpZmllZCI6InRydWUiLCJjdXN0b21lcl9pc2luIjoiMTEyOTA5MzgxNzQzOTgiLCJzY29wZSI6WyJvcGVuaWQiLCJlYXN5Ml9hcGkiXSwiYW1yIjpbInB3ZCJdfQ.HK29QfVBfKUhuoG9NO24EZ4-ktZwWM_QtM2vwQdYXsI-YSr9P8KRVVBauYTXSF0ed5fa4HppFb598ZGgw6ZbpTKFwEJw6gf_vXa5954cnVm4S4VzbLp9cgBN0sz8hu7jgkuB7ITVnhIbmhYuaGzKQwBHLbQC8pHg7p8Ij5XPRwOiPFn2BFpJRbJZ-OLKDK_5NDQuhS0IoKy0JVAp4ZukP9C6eKYBTalt6gJmCLusTsD6z9LhfBK199Y7aux3sROiROQITrH1XJjkjAl_3iAqAooUozj22E4VhLzKg3auakIheLyEq_BtPbgaKODIlOpWgdATHOyxeAeWrFZeXV2Xeg"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Referer",
+              "value": "https://d.easytrader.emofid.com/"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": 1768,
+          "bodySize": 0
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 29 Jan 2020 19:08:56 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "content-encoding",
+              "value": "br"
+            },
+            {
+              "name": "vary",
+              "value": "Origin,Accept-Encoding,Origin"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "x-envoy-upstream-service-time",
+              "value": "11"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "TS01195783=01bc767316aa6cd0652c177bf3746317f3d8c3d86fbde83bf2c7066f09cc939fb22f1d0f7f7d5d70fef904e348748cdcfd725f41b2; Path=/"
+            },
+            {
+              "name": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "TS01195783",
+              "value": "01bc767316aa6cd0652c177bf3746317f3d8c3d86fbde83bf2c7066f09cc939fb22f1d0f7f7d5d70fef904e348748cdcfd725f41b2",
+              "path": "/",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            }
+          ],
+          "content": {
+            "size": 294,
+            "mimeType": "application/json",
+            "compression": 18
+          },
+          "redirectURL": "",
+          "headersSize": 426,
+          "bodySize": 276,
+          "_transferSize": 702
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 5.762000001238194,
+          "dns": -1,
+          "ssl": -1,
+          "connect": -1,
+          "send": 0.19999999999999973,
+          "wait": 112.09200000106473,
+          "receive": 2.8419999980542343,
+          "_blocked_queueing": 3.2920000012381934
+        },
+        "serverIPAddress": "193.34.246.31",
+        "_initiator": {
+          "type": "script",
+          "stack": {
+            "callFrames": [
+              {
+                "functionName": "k",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 35727
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6774
+              },
+              {
+                "functionName": "onScheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 4096
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6673
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 3071
+              },
+              {
+                "functionName": "scheduleMacroTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 3380
+              },
+              {
+                "functionName": "g",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 15054
+              },
+              {
+                "functionName": "",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 36141
+              },
+              {
+                "functionName": "s.<computed>",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 17902
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1824784
+              },
+              {
+                "functionName": "_trySubscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683384
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683192
+              },
+              {
+                "functionName": "s",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2801417
+              },
+              {
+                "functionName": "_innerSub",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596728
+              },
+              {
+                "functionName": "_tryNext",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596623
+              },
+              {
+                "functionName": "_next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596462
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 781816
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4546377
+              },
+              {
+                "functionName": "_trySubscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683384
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683192
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596201
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4583181
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4453632
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1857472
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "getStockDetailsMarketData",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3054388
+              },
+              {
+                "functionName": "init",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3053063
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 3052978
+              },
+              {
+                "functionName": "_next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4907345
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 781816
+              },
+              {
+                "functionName": "debouncedNext",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2003042
+              },
+              {
+                "functionName": "a",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2003194
+              },
+              {
+                "functionName": "_execute",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 251427
+              },
+              {
+                "functionName": "execute",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 251265
+              },
+              {
+                "functionName": "flush",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1830029
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 7011
+              },
+              {
+                "functionName": "onInvokeTask",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1028878
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6932
+              },
+              {
+                "functionName": "runTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 2517
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 8012
+              },
+              {
+                "functionName": "invoke",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 7914
+              },
+              {
+                "functionName": "n.args.<computed>",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 31950
+              }
+            ],
+            "parent": {
+              "description": "setInterval",
+              "callFrames": [
+                {
+                  "functionName": "a",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 32107
+                },
+                {
+                  "functionName": "scheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 6774
+                },
+                {
+                  "functionName": "onScheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4096
+                },
+                {
+                  "functionName": "scheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 6673
+                },
+                {
+                  "functionName": "scheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 3071
+                },
+                {
+                  "functionName": "scheduleMacroTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 3380
+                },
+                {
+                  "functionName": "g",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 15054
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 32230
+                },
+                {
+                  "functionName": "s.<computed>",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 17902
+                },
+                {
+                  "functionName": "requestAsyncId",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 251026
+                },
+                {
+                  "functionName": "schedule",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 250962
+                },
+                {
+                  "functionName": "schedule",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2732902
+                },
+                {
+                  "functionName": "schedule",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1829914
+                },
+                {
+                  "functionName": "_next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2002817
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 781816
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2702180
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 201006
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2921034
+                },
+                {
+                  "functionName": "_next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4907345
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 781816
+                },
+                {
+                  "functionName": "_subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 200873
+                },
+                {
+                  "functionName": "_trySubscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683384
+                },
+                {
+                  "functionName": "_trySubscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2702677
+                },
+                {
+                  "functionName": "subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683192
+                },
+                {
+                  "functionName": "_subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683700
+                },
+                {
+                  "functionName": "subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683173
+                },
+                {
+                  "functionName": "call",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4906935
+                },
+                {
+                  "functionName": "subscribe",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1683070
+                },
+                {
+                  "functionName": "set activeStockIsin",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2921073
+                },
+                {
+                  "functionName": "onItemClicked",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 5704466
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 5713085
+                },
+                {
+                  "functionName": "handleEvent",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1056084
+                },
+                {
+                  "functionName": "handleEvent",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1067484
+                },
+                {
+                  "functionName": "$p",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 971377
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1049409
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 3326640
+                },
+                {
+                  "functionName": "invokeTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 7011
+                },
+                {
+                  "functionName": "onInvokeTask",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1028878
+                },
+                {
+                  "functionName": "invokeTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 6932
+                },
+                {
+                  "functionName": "runTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2517
+                },
+                {
+                  "functionName": "invokeTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 8012
+                },
+                {
+                  "functionName": "y",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 19983
+                },
+                {
+                  "functionName": "k",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 20225
+                }
+              ]
+            }
+          }
+        },
+        "_priority": "High",
+        "_resourceType": "xhr",
+        "connection": "55168"
+      },
+      {
+        "startedDateTime": "2020-01-29T19:11:20.611Z",
+        "time": 85.78900000065914,
+        "request": {
+          "method": "OPTIONS",
+          "url": "https://d11.emofid.com/easy/api/Layout",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "d11.emofid.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Access-Control-Request-Method",
+              "value": "POST"
+            },
+            {
+              "name": "Origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+            },
+            {
+              "name": "Access-Control-Request-Headers",
+              "value": "authorization,content-type"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Referer",
+              "value": "https://d.easytrader.emofid.com/"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": 521,
+          "bodySize": 0
+        },
+        "response": {
+          "status": 204,
+          "statusText": "No Content",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 29 Jan 2020 19:11:18 GMT"
+            },
+            {
+              "name": "vary",
+              "value": "Origin"
+            },
+            {
+              "name": "access-control-allow-headers",
+              "value": "authorization,content-type"
+            },
+            {
+              "name": "access-control-allow-methods",
+              "value": "POST"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "x-envoy-upstream-service-time",
+              "value": "1"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "TS01195783=01bc767316d8ea818d0d6c5c3d115fce84792f440de4da7fa2dfa11372a77f0d3222855b413a501653b0ae05301327bedb1a661e25; Path=/"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "TS01195783",
+              "value": "01bc767316d8ea818d0d6c5c3d115fce84792f440de4da7fa2dfa11372a77f0d3222855b413a501653b0ae05301327bedb1a661e25",
+              "path": "/",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            }
+          ],
+          "content": {
+            "size": 0,
+            "mimeType": "text/plain",
+            "compression": 0
+          },
+          "redirectURL": "",
+          "headersSize": 407,
+          "bodySize": 0,
+          "_transferSize": 407
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 3.2530000032272657,
+          "dns": -1,
+          "ssl": -1,
+          "connect": -1,
+          "send": 0.17800000000000016,
+          "wait": 81.0839999990568,
+          "receive": 1.273999998375075,
+          "_blocked_queueing": 2.2340000032272656
+        },
+        "serverIPAddress": "193.34.246.31",
+        "_initiator": {
+          "type": "script",
+          "stack": {
+            "callFrames": [
+              {
+                "functionName": "k",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 35727
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6774
+              },
+              {
+                "functionName": "onScheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 4096
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6673
+              },
+              {
+                "functionName": "scheduleTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 3071
+              },
+              {
+                "functionName": "scheduleMacroTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 3380
+              },
+              {
+                "functionName": "g",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 15054
+              },
+              {
+                "functionName": "",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 36141
+              },
+              {
+                "functionName": "s.<computed>",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 17902
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1824784
+              },
+              {
+                "functionName": "_trySubscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683384
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683192
+              },
+              {
+                "functionName": "s",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2801417
+              },
+              {
+                "functionName": "_innerSub",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596728
+              },
+              {
+                "functionName": "_tryNext",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596623
+              },
+              {
+                "functionName": "_next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596462
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 781816
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4546377
+              },
+              {
+                "functionName": "_trySubscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683384
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683192
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 596201
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4583181
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "call",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4453632
+              },
+              {
+                "functionName": "subscribe",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1683070
+              },
+              {
+                "functionName": "",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4550464
+              },
+              {
+                "functionName": "_next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 4907345
+              },
+              {
+                "functionName": "next",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 781816
+              },
+              {
+                "functionName": "debouncedNext",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2003042
+              },
+              {
+                "functionName": "a",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 2003194
+              },
+              {
+                "functionName": "_execute",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 251427
+              },
+              {
+                "functionName": "execute",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 251265
+              },
+              {
+                "functionName": "flush",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1830029
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 7011
+              },
+              {
+                "functionName": "onInvokeTask",
+                "scriptId": "1023",
+                "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                "lineNumber": 0,
+                "columnNumber": 1028878
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 6932
+              },
+              {
+                "functionName": "runTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 2517
+              },
+              {
+                "functionName": "invokeTask",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 8012
+              },
+              {
+                "functionName": "invoke",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 7914
+              },
+              {
+                "functionName": "n.args.<computed>",
+                "scriptId": "1018",
+                "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                "lineNumber": 0,
+                "columnNumber": 31950
+              }
+            ],
+            "parent": {
+              "description": "setInterval",
+              "callFrames": [
+                {
+                  "functionName": "a",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 32107
+                },
+                {
+                  "functionName": "scheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 6774
+                },
+                {
+                  "functionName": "onScheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4096
+                },
+                {
+                  "functionName": "scheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 6673
+                },
+                {
+                  "functionName": "scheduleTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 3071
+                },
+                {
+                  "functionName": "scheduleMacroTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 3380
+                },
+                {
+                  "functionName": "g",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 15054
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 32230
+                },
+                {
+                  "functionName": "s.<computed>",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 17902
+                },
+                {
+                  "functionName": "requestAsyncId",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 251026
+                },
+                {
+                  "functionName": "schedule",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 250962
+                },
+                {
+                  "functionName": "schedule",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2732902
+                },
+                {
+                  "functionName": "schedule",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1829914
+                },
+                {
+                  "functionName": "_next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2002817
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 781816
+                },
+                {
+                  "functionName": "next",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2702180
+                },
+                {
+                  "functionName": "saveLayout",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4550523
+                },
+                {
+                  "functionName": "set layoutModel",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4548265
+                },
+                {
+                  "functionName": "set closeMode",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4548692
+                },
+                {
+                  "functionName": "changeStackOrderCloseMode",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 4550819
+                },
+                {
+                  "functionName": "onToggleForceClose",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 5792506
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 5804204
+                },
+                {
+                  "functionName": "handleEvent",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1056084
+                },
+                {
+                  "functionName": "handleEvent",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1067484
+                },
+                {
+                  "functionName": "$p",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 971377
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1049409
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 3326640
+                },
+                {
+                  "functionName": "invokeTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 7011
+                },
+                {
+                  "functionName": "onInvokeTask",
+                  "scriptId": "1023",
+                  "url": "https://d.easytrader.emofid.com/main-es2015.494bab2f4c86a41b230c.js",
+                  "lineNumber": 0,
+                  "columnNumber": 1028878
+                },
+                {
+                  "functionName": "invokeTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 6932
+                },
+                {
+                  "functionName": "runTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 2517
+                },
+                {
+                  "functionName": "invokeTask",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 8012
+                },
+                {
+                  "functionName": "y",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 19983
+                },
+                {
+                  "functionName": "k",
+                  "scriptId": "1018",
+                  "url": "https://d.easytrader.emofid.com/polyfills-es2015.0fe6949bc5ff4b784062.js",
+                  "lineNumber": 0,
+                  "columnNumber": 20225
+                }
+              ]
+            }
+          }
+        },
+        "_priority": "High",
+        "_resourceType": "xhr",
+        "connection": "55168"
+      },
+      {
+        "startedDateTime": "2020-01-29T19:11:20.698Z",
+        "time": 139.2409999971278,
+        "request": {
+          "method": "POST",
+          "url": "https://d11.emofid.com/easy/api/Layout",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "d11.emofid.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Content-Length",
+              "value": "636"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json, text/plain, */*"
+            },
+            {
+              "name": "Origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjllZjJmNDQ5MDk3NjljZjdjMmFiMjdlYWNmZTI0NzE4IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1ODAzMDcwMzksImV4cCI6MTU4MDMyODYzOSwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50LmVtb2ZpZC5jb20iLCJhdWQiOlsiaHR0cHM6Ly9hY2NvdW50LmVtb2ZpZC5jb20vcmVzb3VyY2VzIiwiZWFzeTJfYXBpIl0sImNsaWVudF9pZCI6ImVhc3kyX2NsaWVudCIsInN1YiI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsImF1dGhfdGltZSI6MTU4MDMwNzAyMywiaWRwIjoibG9jYWwiLCJwayI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsInR3b19mYWN0b3JfZW5hYmxlZCI6ImZhbHNlIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiM2U2ZmEzYzYtZGU4OC00ZTI4LWIxNzItOGQ2ZjMxMGY5YTk0IiwibmFtZSI6IjNlNmZhM2M2LWRlODgtNGUyOC1iMTcyLThkNmYzMTBmOWE5NCIsInBob25lX251bWJlciI6IjA5MzY0Mjk5MDE0IiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjp0cnVlLCJuYXRpb25hbF9pZCI6IjA5MzgxNzQzOTgiLCJuYXRpb25hbF9pZF92ZXJpZmllZCI6InRydWUiLCJjdXN0b21lcl9pc2luIjoiMTEyOTA5MzgxNzQzOTgiLCJzY29wZSI6WyJvcGVuaWQiLCJlYXN5Ml9hcGkiXSwiYW1yIjpbInB3ZCJdfQ.HK29QfVBfKUhuoG9NO24EZ4-ktZwWM_QtM2vwQdYXsI-YSr9P8KRVVBauYTXSF0ed5fa4HppFb598ZGgw6ZbpTKFwEJw6gf_vXa5954cnVm4S4VzbLp9cgBN0sz8hu7jgkuB7ITVnhIbmhYuaGzKQwBHLbQC8pHg7p8Ij5XPRwOiPFn2BFpJRbJZ-OLKDK_5NDQuhS0IoKy0JVAp4ZukP9C6eKYBTalt6gJmCLusTsD6z9LhfBK199Y7aux3sROiROQITrH1XJjkjAl_3iAqAooUozj22E4VhLzKg3auakIheLyEq_BtPbgaKODIlOpWgdATHOyxeAeWrFZeXV2Xeg"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Referer",
+              "value": "https://d.easytrader.emofid.com/"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": 1777,
+          "bodySize": 636,
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"layoutModel\":\"{\\\"baseLayout\\\":0,\\\"selectedLayout\\\":\\\"layout1\\\",\\\"collapseMode\\\":{\\\"stackOrderCollapse\\\":false},\\\"closeMode\\\":{\\\"stackOrderClose\\\":false,\\\"userStatusbarClose\\\":false},\\\"layout1Config\\\":{\\\"rows\\\":[{\\\"size\\\":40},{\\\"size\\\":60,\\\"columns\\\":[{\\\"size\\\":\\\"34\\\"},{\\\"size\\\":\\\"40\\\"},{\\\"size\\\":\\\"26\\\"}]},{}]},\\\"layout2Config\\\":{\\\"columns\\\":[{\\\"size\\\":\\\"*\\\",\\\"rows\\\":[{\\\"size\\\":\\\"60\\\"},{\\\"size\\\":\\\"40\\\"}]},{\\\"size\\\":400}]},\\\"layout3Config\\\":{\\\"columns\\\":[{\\\"size\\\":\\\"*\\\",\\\"rows\\\":[{\\\"size\\\":\\\"40\\\"},{\\\"size\\\":\\\"30\\\"},{\\\"size\\\":\\\"30\\\"}]},{\\\"size\\\":\\\"400\\\"}]},\\\"tabularOrderSizeByPercent\\\":{\\\"tv\\\":30,\\\"ef\\\":30,\\\"oh\\\":30,\\\"tr\\\":30}}\"}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 29 Jan 2020 19:11:19 GMT"
+            },
+            {
+              "name": "content-length",
+              "value": "0"
+            },
+            {
+              "name": "vary",
+              "value": "Origin,Origin"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://d.easytrader.emofid.com"
+            },
+            {
+              "name": "x-envoy-upstream-service-time",
+              "value": "21"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "TS01195783=01bc7673169faf215f03a6ea021f411f09bccd2aadf64cdd14263ea9771cd133ad149c536a9ec71e3547745355f79c57bbb565a35b; Path=/"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "TS01195783",
+              "value": "01bc7673169faf215f03a6ea021f411f09bccd2aadf64cdd14263ea9771cd133ad149c536a9ec71e3547745355f79c57bbb565a35b",
+              "path": "/",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            }
+          ],
+          "content": {
+            "size": 0,
+            "mimeType": "text/plain",
+            "compression": 0
+          },
+          "redirectURL": "",
+          "headersSize": 332,
+          "bodySize": 0,
+          "_transferSize": 332
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 3.3160000003420285,
+          "dns": -1,
+          "ssl": -1,
+          "connect": -1,
+          "send": 0.22499999999999987,
+          "wait": 134.51000000138185,
+          "receive": 1.189999995403923,
+          "_blocked_queueing": 2.161000000342028
+        },
+        "serverIPAddress": "193.34.246.31",
+        "_initiator": {
+          "type": "other"
+        },
+        "_priority": "High",
+        "_resourceType": "xhr",
+        "connection": "55168"
+      }
+    ]
+  }
+}
