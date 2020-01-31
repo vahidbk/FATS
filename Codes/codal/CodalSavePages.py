@@ -77,7 +77,7 @@ def getDataTable(soup):
             dataTable.append(dataRow)
     return dataTable
 
-def getListOfSoratHayeMali(soup):
+def gettheSubjectRecord(soup):
     select = soup.find('select', attrs={'id':'ddlTable'})
     optionData={}
     if (select):
@@ -88,20 +88,22 @@ def getListOfSoratHayeMali(soup):
             optionData[text]=value
     return optionData
 
-def listOfSoratHayeMaliToJson(table, chrome, url, title, tracingNo, symbol, companyName, sentDateTime):
+def saveListOfSoratHayeMaliToJson(table, chrome, url, title, tracingNo, symbol, companyName, sentDateTime):
     pageSource = chrome.loadURLByTrackingNoOffline(symbol, url, tracingNo, 1)
     soup = BeautifulSoup(pageSource,"lxml")
     try:
-        listOfSoratHayeMali=getListOfSoratHayeMali(soup)
+        theSubjectRecord=gettheSubjectRecord(soup)
         data={"TracingNo":tracingNo, "Title": title, "SentDateTime":sentDateTime, "Symbol":symbol, "CompanyName":companyName, \
-              "listOfSoratHayeMali":listOfSoratHayeMali}
+              "theSubjectRecord":theSubjectRecord}
         table.insert(data)
     except:
-        print(f'Error listOfSoratHayeMali Comment: {err}') 
+        print(f'Error theSubjectRecord Comment: {err}') 
 
-
-def SodAndZianUrlToJson(table, chrome, url, title, tracingNo, symbol, companyName, sentDateTime):
-    pageSource = chrome.loadURLByTrackingNoOffline(symbol, url, tracingNo, 1)
+def saveSoratVaziatMaliToJson(table, chrome, url, sheetId, title, tracingNo, symbol, companyName, sentDateTime):
+    pageSource = chrome.loadURLByTrackingNoOffline(symbol, url, tracingNo, sheetId)
+    
+def saveSodVaZianToJson(table, chrome, url, sheetId, title, tracingNo, symbol, companyName, sentDateTime):
+    pageSource = chrome.loadURLByTrackingNoOffline(symbol, url, tracingNo, sheetId)
     
     soup = BeautifulSoup(pageSource,"lxml")
         
@@ -113,80 +115,135 @@ def SodAndZianUrlToJson(table, chrome, url, title, tracingNo, symbol, companyNam
         table.insert(data)
     except Exception as err:
         print("Error In TrackingNo:"+str(tracingNo)+", Symbol:"+persianToFinglish(symbol))
-        print(f'Error SodAndZianUrlToJson Comment: {err}') 
+        print(f'Error SodVaZianUrlToJson Comment: {err}') 
 
-#Todo use group callback to travers over data
-#Todo extract list of SoratHaye mali from sod and zian
+#TODO use group callback to traverse over data
+#TODO extract list of SoratHaye mali from sod and zian
     
-def updateCodalSavePages(start, end):
-    chrome = Chrome(False)
+def updateCodalListOfSoratMali(chrome, symbol, codalRawDataTableName, sheetId):
+    
+    ## TrackNo_ValueNumber
+    db = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalLinks,'symbol':symbol}))
+    LinkOfPagesTable = db.table('Links')
+    LinkOfPages=LinkOfPagesTable.all()
+    
+    theLetterInLinkOfPages = []
+    for linkOfPage in LinkOfPages:
+        title=linkOfPage['letter']['Title']
+        if (title.find("صورت‌های مالی")>-1):
+            theLetterInLinkOfPages.append(linkOfPage)
 
-    groupDB = TinyDB(FilenameManager.get({'enum':FilenameManager.Groups}))
-    symbolsTable = groupDB.table('Symbols')
-    symbols = symbolsTable.all()
-    symbolsCounter = len(symbols)
-    symbolIndex = 0;
-    timer = Timer()
+    codalRawDataDB = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalRawData,'symbol':symbol}))
+    theSubjectsTable = codalRawDataDB.table(codalRawDataTableName)
 
+    theSubjectsTableData = theSubjectsTable.all()
+    theSubjectsTableDataLen = len(theSubjectsTableData)
+    linkOfPageCounter=0
+    for linkOfPage in theLetterInLinkOfPages:
+        if (len(theLetterInLinkOfPages)<=theSubjectsTableDataLen):
+            break;
+        isFind=False
+        for theSubjectRecord in theSubjectsTable:
+            if (theSubjectRecord['TracingNo']==linkOfPage['letter']['TracingNo']):
+                isFind=True
+                break
+        if not (isFind):
+            url = "https://www.codal.ir"+linkOfPage['letter']['Url']+"&sheetId="+str(sheetId)
+
+            print(str(linkOfPageCounter)+"/"+str(len(theLetterInLinkOfPages)), end="\r", flush=True)
+
+            saveListOfSoratHayeMaliToJson(theSubjectsTable, chrome, url, linkOfPage['letter']['Title'], linkOfPage['letter']['TracingNo']\
+            , linkOfPage['letter']['Symbol'], linkOfPage['letter']['CompanyName'], linkOfPage['letter']['SentDateTime'])
+
+            theSubjectsTableDataLen+=1
+        linkOfPageCounter+=1
+    codalRawDataDB.close()
+ 
+def processSoratMali(chrome, theLetterInLinkOfPagesWithSheetID, codalRawDataDB, symbol, codalRawDataTableName, saveToJsonCallback):
+    codalRawDataDB = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalRawData,'symbol':symbol}))
+    theSubjectsTable = codalRawDataDB.table(codalRawDataTableName)
+
+    theSubjectsTableData = theSubjectsTable.all()
+    theSubjectsTableDataLen = len(theSubjectsTableData)
+    linkOfPageCounter=0
+    for linkOfPageWithSheetID in theLetterInLinkOfPagesWithSheetID:
+        if (len(theLetterInLinkOfPagesWithSheetID)<=theSubjectsTableDataLen):
+            break;
+        linkOfPage=linkOfPageWithSheetID['linkOfPage']
+        sheetId=linkOfPageWithSheetID['sheetId']
+        isFind=False
+        for theSubjectRecord in theSubjectsTable:
+            if (theSubjectRecord['TracingNo']==linkOfPage['letter']['TracingNo']):
+                isFind=True
+                break
+        if not (isFind):
+            url = "https://www.codal.ir"+linkOfPage['letter']['Url']+"&sheetId="+str(sheetId)
+
+            print(str(linkOfPageCounter)+"/"+str(len(theLetterInLinkOfPagesWithSheetID)), end="\r", flush=True)
+
+            saveToJsonCallback(theSubjectsTable, chrome, url, sheetId, linkOfPage['letter']['Title'], linkOfPage['letter']['TracingNo']\
+            , linkOfPage['letter']['Symbol'], linkOfPage['letter']['CompanyName'], linkOfPage['letter']['SentDateTime'])
+
+            theSubjectsTableDataLen+=1
+        linkOfPageCounter+=1
+
+def updateCodalSoratMali(chrome, symbol):
+    ## TrackNo_ValueNumber
+    db = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalLinks,'symbol':symbol}))
+    LinkOfPagesTable = db.table('Links')
+    LinkOfPages=LinkOfPagesTable.all()
+    
+    theLetterInLinkOfPages = []
+    for linkOfPage in LinkOfPages:
+        title=linkOfPage['letter']['Title']
+        if (title.find("صورت‌های مالی")>-1):
+            theLetterInLinkOfPages.append(linkOfPage)
+
+    codalRawDataDB = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalRawData,'symbol':symbol}))
+    soratMaliTableDataTable = codalRawDataDB.table('ListOfSoratHayeMali')
+    soratMaliTableData = soratMaliTableDataTable.all()
+    soratMaliTableDataLen = len(soratMaliTableData)
+    
+    linkOfPageCounter=0
+    SoratMaliLetterGroupBySubjects = {}
+    for linkOfPage in theLetterInLinkOfPages:
+        for sorateMali in soratMaliTableData:
+            if sorateMali['TracingNo']==linkOfPage['letter']['TracingNo']:
+                for theSubjectKey in sorateMali['theSubjectRecord']:
+                    sheetId = sorateMali['theSubjectRecord'][theSubjectKey]
+                    if not (theSubjectKey in SoratMaliLetterGroupBySubjects):
+                        SoratMaliLetterGroupBySubjects[theSubjectKey]=[]
+                    SoratMaliLetterGroupBySubjects[theSubjectKey].append({'linkOfPage':linkOfPage, 'sheetId':sheetId})
+    #----------------
+    theSubjectKey='صورت وضعیت مالی'
+    soratVaziatMali = SoratMaliLetterGroupBySubjects[theSubjectKey]  
+    codalRawDataTableName='soratVaziatMali'
+    processSoratMali(chrome, soratVaziatMali, codalRawDataDB, symbol\
+        , codalRawDataTableName, saveSoratVaziatMaliToJson)
+    #----------------
+    theSubjectKey='صورت سود و زیان'
+    soratVaziatMali = SoratMaliLetterGroupBySubjects[theSubjectKey]  
+    codalRawDataTableName='SodVaZian'
+    processSoratMali(chrome, soratVaziatMali, codalRawDataDB, symbol\
+        , codalRawDataTableName, saveSodVaZianToJson)
+    #----------------
+
+    codalRawDataDB.close()
+
+ 
+def doOperation(symbol, symbolIndex, symbolsCounter):
     #todo: extract co list name and create folder for them 
     ## TrackNo_ValueNumber
+    print("------"+persianToFinglish(symbol['sy']))        
+    chrome = Chrome(False)
+    updateCodalListOfSoratMali(chrome, symbol['sy'], 'ListOfSoratHayeMali', 1)
+    updateCodalSoratMali(chrome, symbol['sy'])
+    del chrome
+    print("\n"+str(symbolIndex)+'/'+str(symbolsCounter)+":"+"-----")
 
-    for symbol in symbols:
-        symbolIndex+=1
-        if (start):
-            if (symbolIndex<int(start)):
-                continue
-        if (end):
-            if (symbolIndex>int(end)):
-                continue
-        print("------"+persianToFinglish(symbol['sy']))        
-        if not (symbol['GroupName']=='Unknown' or symbol['st']==2 or symbol['st']==3):
-            
-            db = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalLinks,'symbol':symbol['sy']}))
-            LinkOfPagesTable = db.table('Links')
-            LinkOfPages=LinkOfPagesTable.all()
-            
-            SoratMaliLinkOfPages = []
-            for linkOfPage in LinkOfPages:
-                title=linkOfPage['letter']['Title']
-                if (title.find("صورت‌های مالی")>-1):
-                    SoratMaliLinkOfPages.append(linkOfPage)
-
-            codalRawDataDB = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalRawData,'symbol':symbol['sy']}))
-            SodAndZianTable = codalRawDataDB.table('SodAndZian')
-            listOfSoratHayeMaliTable = codalRawDataDB.table('ListOfSoratHayeMali')
-            
-            sodAndZianTableData = SodAndZianTable.all()
-            sodAndZianTableDataLen = len(sodAndZianTableData)
-            linkOfPageCounter=0
-            for linkOfPage in SoratMaliLinkOfPages:
-                if (len(SoratMaliLinkOfPages)<=sodAndZianTableDataLen):
-                    break;
-                isFind=False
-                for sodAndZianData in sodAndZianTableData:
-                    if (sodAndZianData['TracingNo']==linkOfPage['letter']['TracingNo']):
-                        isFind=True
-                        break
-                if not (isFind):
-                    url = "https://www.codal.ir"+linkOfPage['letter']['Url']+"&sheetId=1"
-
-                    print(str(linkOfPageCounter)+"/"+str(len(SoratMaliLinkOfPages)), end="\r", flush=True)
-
-                    listOfSoratHayeMaliToJson(listOfSoratHayeMaliTable, chrome, url, linkOfPage['letter']['Title'], linkOfPage['letter']['TracingNo']\
-                    , linkOfPage['letter']['Symbol'], linkOfPage['letter']['CompanyName'], linkOfPage['letter']['SentDateTime'])
-
-                    SodAndZianUrlToJson(SodAndZianTable, chrome, url, linkOfPage['letter']['Title'], linkOfPage['letter']['TracingNo']\
-                                        , linkOfPage['letter']['Symbol'], linkOfPage['letter']['CompanyName'], linkOfPage['letter']['SentDateTime'])
-                    sodAndZianTableDataLen+=1
-                linkOfPageCounter+=1
-            codalRawDataDB.close()
-        else:
-            print("\n"+str(symbolIndex)+'/'+str(symbolsCounter)+":"+"-----")
-            
-    groupDB.close()
+def updateCodalSavePages(start, end):
+    timer = Timer()
+    GroupProcess.getSymbols(start, end, True, doOperation)
     timer.printWatch()
     del timer
-    del chrome
-
-
-#updateCodalSavePages(785,785)
+    

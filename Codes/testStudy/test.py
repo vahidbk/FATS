@@ -1,3 +1,9 @@
+def a(callback):
+    c=callback(12)
+    print(c)
+a(lambda b:b+1)
+exit(0)
+
 from PyQt5.QtWidgets import *
 app = QApplication([])
 button = QPushButton('Click')
