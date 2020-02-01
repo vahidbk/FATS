@@ -1,7 +1,14 @@
-def a(callback):
-    c=callback(12)
-    print(c)
-a(lambda b:b+1)
+from CommonDefs import *
+
+from codal.extractSubCoList import extractSubCoList
+start = 786
+end = 786
+extractSubCoList(start, end)
+
+
+
+
+
 exit(0)
 
 from PyQt5.QtWidgets import *

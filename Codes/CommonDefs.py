@@ -53,15 +53,17 @@ class FilenameManager(Enum):
     CodalLinks = 1
     Groups = 2
     CodalRawData = 3
-    TagData = 4
-    CatchHTML = 5
-    LoginData = 6
+    CodalSoratMaliSheetId = 4
+    TagData = 5
+    CatchHTML = 6
+    LoginData = 7
     def get(params):
         value=params['enum']
         if value==FilenameManager.Temp:result=params['filename']
         elif value==FilenameManager.CodalLinks:result=createDirectory('DB/Symbols/'+params['symbol']+"/")+'CodalLinks.json'
         elif value==FilenameManager.Groups:result=createDirectory('DB/General/')+'Groups.json'
         elif value==FilenameManager.CodalRawData:result=createDirectory('DB/Symbols/'+params['symbol']+"/")+'CodalRawData.json'
+        elif value==FilenameManager.CodalSoratMaliSheetId:result=createDirectory('DB/')+'CodalSoratMaliSheetId.json'
         elif value==FilenameManager.TagData:result=createDirectory('DB/Symbols/'+params['symbol']+"/")+'TagData.json'
         elif value==FilenameManager.CatchHTML:result=createDirectory('DB/Symbols/'+params['symbol']+"/CatchHTML/") + ("tracingNo"+str(params['tracingNo'])+"_"+str(params['value'])+".html")
         elif value==FilenameManager.LoginData:result=createDirectory('ImportantDatas/') + 'LoginData.json'

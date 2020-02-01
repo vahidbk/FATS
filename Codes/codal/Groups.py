@@ -20,13 +20,13 @@ def updateGroups():
     groupTable = db.table('Groups')
     groupTable.insert_multiple(jsonGroupDatas)
     print('Groups Done')
-
+    #----------
     response = requests.get('https://search.codal.ir/api/search/v1/categories',verify = False)
     db.purge_table('Categories')
     categoriesTable = db.table('Categories')
     categoriesTable.insert_multiple(response.json())
     print('Categories Done')
-
+    #----------
     response = requests.get('https://search.codal.ir/api/search/v1/companies',verify = False)
     jsonDatas = response.json()
     for jsonData in jsonDatas:
@@ -40,5 +40,25 @@ def updateGroups():
     symbolsTable = db.table('Symbols')
     symbolsTable.insert_multiple(jsonDatas)
     print('Symbols Done')
-
+    #----------
+    symbolsTable = db.table('Symbols')
+    symbols = symbolsTable.all()
+    symbolGroupByGroupName={}
+    for symbol in symbols:
+        if not (symbol['GroupName'] in symbolGroupByGroupName):
+            symbolGroupByGroupName[symbol['GroupName']]={}
+        symbolGroupByGroupName[symbol['GroupName']][symbol['sy']]=symbol['n']
+    db.purge_table('SymbolGroupByGroupName')    
+    symbolsTable = db.table('SymbolGroupByGroupName')
+    symbolsTable.insert(symbolGroupByGroupName)    
+    #----------
+    totalSymbolInGroup={}
+    for groupName in symbolGroupByGroupName:
+        symbolInGroupCounter=len(symbolGroupByGroupName[groupName])
+        totalSymbolInGroup[groupName]=symbolInGroupCounter
+    db.purge_table('totalSymbolInGroup')    
+    symbolsTable = db.table('totalSymbolInGroup')
+    symbolsTable.insert(totalSymbolInGroup)    
+    #----------
+    print('Processing on Data is Done')
     db.close()

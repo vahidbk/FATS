@@ -33,6 +33,13 @@
             "console": "integratedTerminal"
         },
         {
+            "name": "Python: Test File (external)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Codes\\test.py",
+            "console": "externalTerminal"
+        },
+        {
             "name": "Python: Service (external)",
             "type": "python",
             "request": "launch",

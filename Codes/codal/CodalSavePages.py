@@ -200,7 +200,7 @@ def updateCodalSoratMali(chrome, symbol):
             theLetterInLinkOfPages.append(linkOfPage)
 
     codalRawDataDB = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalRawData,'symbol':symbol}))
-    soratMaliTableDataTable = codalRawDataDB.table('ListOfSoratHayeMali')
+    soratMaliTableDataTable = codalRawDataDB.table('SoratHayeMali')
     soratMaliTableData = soratMaliTableDataTable.all()
     soratMaliTableDataLen = len(soratMaliTableData)
     
@@ -216,16 +216,18 @@ def updateCodalSoratMali(chrome, symbol):
                     SoratMaliLetterGroupBySubjects[theSubjectKey].append({'linkOfPage':linkOfPage, 'sheetId':sheetId})
     #----------------
     theSubjectKey='صورت وضعیت مالی'
-    soratVaziatMali = SoratMaliLetterGroupBySubjects[theSubjectKey]  
-    codalRawDataTableName='soratVaziatMali'
-    processSoratMali(chrome, soratVaziatMali, codalRawDataDB, symbol\
-        , codalRawDataTableName, saveSoratVaziatMaliToJson)
+    if theSubjectKey in SoratMaliLetterGroupBySubjects:
+        soratVaziatMali = SoratMaliLetterGroupBySubjects[theSubjectKey]  
+        codalRawDataTableName='soratVaziatMali'
+        processSoratMali(chrome, soratVaziatMali, codalRawDataDB, symbol\
+            , codalRawDataTableName, saveSoratVaziatMaliToJson)
     #----------------
     theSubjectKey='صورت سود و زیان'
-    soratVaziatMali = SoratMaliLetterGroupBySubjects[theSubjectKey]  
-    codalRawDataTableName='SodVaZian'
-    processSoratMali(chrome, soratVaziatMali, codalRawDataDB, symbol\
-        , codalRawDataTableName, saveSodVaZianToJson)
+    if theSubjectKey in SoratMaliLetterGroupBySubjects:
+        soratVaziatMali = SoratMaliLetterGroupBySubjects[theSubjectKey]  
+        codalRawDataTableName='SodVaZian'
+        processSoratMali(chrome, soratVaziatMali, codalRawDataDB, symbol\
+            , codalRawDataTableName, saveSodVaZianToJson)
     #----------------
 
     codalRawDataDB.close()
@@ -236,7 +238,7 @@ def doOperation(symbol, symbolIndex, symbolsCounter):
     ## TrackNo_ValueNumber
     print("------"+persianToFinglish(symbol['sy']))        
     chrome = Chrome(False)
-    updateCodalListOfSoratMali(chrome, symbol['sy'], 'ListOfSoratHayeMali', 1)
+    updateCodalListOfSoratMali(chrome, symbol['sy'], 'SoratHayeMali', 1)
     updateCodalSoratMali(chrome, symbol['sy'])
     del chrome
     print("\n"+str(symbolIndex)+'/'+str(symbolsCounter)+":"+"-----")
