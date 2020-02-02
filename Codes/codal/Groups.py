@@ -4,6 +4,12 @@ from bs4 import BeautifulSoup
 from tinydb import Query, TinyDB, where
 from CommonDefs import *
 
+def dictSorter(dict):
+    sortedDict={}
+    for key in sorted(dict):
+        sortedDict[key]=dict[key]
+    return sortedDict
+
 def updateGroups():
     requests.packages.urllib3.disable_warnings()
 
@@ -11,14 +17,16 @@ def updateGroups():
     response = requests.get('http://www.tsetmc.com/Loader.aspx?ParTree=111C1213',verify = False)
     soup = BeautifulSoup(response.text,"lxml")
     tds = soup.find_all({'td'})
-    jsonGroupDatas=[]
+    jsonGroupDatas={}
     groupDict={}
     for i in range(1, int(len(tds)/2)):
-        jsonGroupDatas.append({'code':(tds[0+(2*i)].text.strip()) , 'name':(tds[1+(2*i)].text.strip())})
+        jsonGroupDatas[tds[1+(2*i)].text.strip()]=tds[0+(2*i)].text.strip()
         groupDict[(tds[0+(2*i)].text.strip())]=(tds[1+(2*i)].text.strip())
+    jsonGroupDatas = dictSorter(jsonGroupDatas)
+    groupDict = dictSorter(groupDict)
     db.purge_table('Groups')
     groupTable = db.table('Groups')
-    groupTable.insert_multiple(jsonGroupDatas)
+    groupTable.insert(jsonGroupDatas)
     print('Groups Done')
     #----------
     response = requests.get('https://search.codal.ir/api/search/v1/categories',verify = False)
@@ -48,6 +56,7 @@ def updateGroups():
         if not (symbol['GroupName'] in symbolGroupByGroupName):
             symbolGroupByGroupName[symbol['GroupName']]={}
         symbolGroupByGroupName[symbol['GroupName']][symbol['sy']]=symbol['n']
+    symbolGroupByGroupName = dictSorter(symbolGroupByGroupName)
     db.purge_table('SymbolGroupByGroupName')    
     symbolsTable = db.table('SymbolGroupByGroupName')
     symbolsTable.insert(symbolGroupByGroupName)    
@@ -56,6 +65,8 @@ def updateGroups():
     for groupName in symbolGroupByGroupName:
         symbolInGroupCounter=len(symbolGroupByGroupName[groupName])
         totalSymbolInGroup[groupName]=symbolInGroupCounter
+    totalSymbolInGroup = dictSorter(totalSymbolInGroup)
+
     db.purge_table('totalSymbolInGroup')    
     symbolsTable = db.table('totalSymbolInGroup')
     symbolsTable.insert(totalSymbolInGroup)    
