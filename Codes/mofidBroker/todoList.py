@@ -1,5 +1,4 @@
-#TODO compare Valid with tse group
-#TODO Extract Halal Companies
+#TODO Extract Halal Companies and travesal over them
 #TODO Extract letter type for data extraction from codal
 #TODO Extract list of key value in SoratHayeMali
 #TODO Extract List Of All Valid information in 'list of key value in SoratHayeMali'
