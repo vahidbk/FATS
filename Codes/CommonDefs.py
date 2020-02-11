@@ -52,16 +52,18 @@ class FilenameManager(Enum):
     Temp=0
     CodalLinks = 1
     Groups = 2
-    CodalRawData = 3
-    CodalSoratMaliSheetId = 4
-    TagData = 5
-    CatchHTML = 6
-    LoginData = 7
+    HalalGroup = 3
+    CodalRawData = 4
+    CodalSoratMaliSheetId = 5
+    TagData = 6
+    CatchHTML = 7
+    LoginData = 8
     def get(params):
         value=params['enum']
         if value==FilenameManager.Temp:result=params['filename']
         elif value==FilenameManager.CodalLinks:result=createDirectory('DB/Symbols/'+params['symbol']+"/")+'CodalLinks.json'
         elif value==FilenameManager.Groups:result=createDirectory('DB/General/')+'Groups.json'
+        elif value==FilenameManager.HalalGroup:result=createDirectory('StaticDB/')+'halalGroup.json'
         elif value==FilenameManager.CodalRawData:result=createDirectory('DB/Symbols/'+params['symbol']+"/")+'CodalRawData.json'
         elif value==FilenameManager.CodalSoratMaliSheetId:result=createDirectory('DB/')+'CodalSoratMaliSheetId.json'
         elif value==FilenameManager.TagData:result=createDirectory('DB/Symbols/'+params['symbol']+"/")+'TagData.json'
@@ -154,12 +156,15 @@ class Chrome:
 
 
 class GroupProcess:
-    def getSymbols(start, end, JustValidSymbols, callback):
+    def getSymbols(start, end, JustValidAndHalalSymbols, callback):
         groupDB = TinyDB(FilenameManager.get({'enum':FilenameManager.Groups}))
         symbolsTable = groupDB.table('Symbols')
         symbols = symbolsTable.all()
         symbolsCounter = len(symbols)
         symbolIndex=0
+        halalGroupDB = TinyDB(FilenameManager.get({'enum':FilenameManager.HalalGroup}))
+        halalGroupTable = HalalGroup.table('HalalGroup')
+        halalGroup = halalGroupTable.all()
         for symbol in symbols:
             symbolIndex+=1
             if (start):
@@ -171,6 +176,8 @@ class GroupProcess:
             if not(JustValidSymbols):
                 if (symbol['GroupName']=='Unknown' or symbol['st']==2 or symbol['st']==3):
                     continue
+            if (halalGroup[symbol['GroupName']]=="Haram"):
+                continue
             callback(symbol, symbolIndex, symbolsCounter)
         groupDB.close()
    

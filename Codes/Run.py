@@ -16,9 +16,9 @@ start = 1
 end = 2000
 #start=end=601
 #print(json.dumps(updateGoldData(), indent = 4))
-updateGroups()
-#updateCodalLetterLinks(start, end)
-#updateCodalSavePages(start, end)
-#processCodalDataToGenerateTags(start, end)
-#showTagData(start, end)
+#updateGroups()
+updateCodalLetterLinks(start, end)
+updateCodalSavePages(start, end)
+processCodalDataToGenerateTags(start, end)
+showTagData(start, end)
 

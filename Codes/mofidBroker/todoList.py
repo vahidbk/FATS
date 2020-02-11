@@ -7,6 +7,8 @@
 #TODO Extract gozaresh mahiane
 #TODO Namayesh Nemodary with ui
 #TODO EXTract Group and sod-dehi saliane
+
+
 #TODO catch To Zip
 
 #TODO استخراج حجم معملات هر سهم
