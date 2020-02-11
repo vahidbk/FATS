@@ -163,8 +163,9 @@ class GroupProcess:
         symbolsCounter = len(symbols)
         symbolIndex=0
         halalGroupDB = TinyDB(FilenameManager.get({'enum':FilenameManager.HalalGroup}))
-        halalGroupTable = HalalGroup.table('HalalGroup')
-        halalGroup = halalGroupTable.all()
+        halalGroupTable = halalGroupDB.table('HalalGroup')
+        halalGroup = halalGroupTable.all()[0]
+        
         for symbol in symbols:
             symbolIndex+=1
             if (start):
@@ -173,11 +174,12 @@ class GroupProcess:
             if (end):
                 if (symbolIndex>int(end)):
                     continue
-            if not(JustValidSymbols):
+            if not(JustValidAndHalalSymbols):
                 if (symbol['GroupName']=='Unknown' or symbol['st']==2 or symbol['st']==3):
                     continue
-            if (halalGroup[symbol['GroupName']]=="Haram"):
-                continue
+            if symbol['Group'] in halalGroup:
+                if (halalGroup[symbol['Group']]=="Haram"):
+                    continue
             callback(symbol, symbolIndex, symbolsCounter)
         groupDB.close()
    
