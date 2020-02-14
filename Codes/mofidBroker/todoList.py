@@ -1,4 +1,4 @@
-#TODO connect button to workers
+#TODO load cookie with response for easy trader
 #TODO create Ui for easy Trader
 #TODO پیداکردن روش خودکار بررسی  کروم بدون نمایش
 #TODO خرید و فروش خودکار

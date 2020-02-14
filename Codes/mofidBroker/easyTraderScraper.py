@@ -56,20 +56,31 @@ class EasyTraderScraperClass:
         Chrome.driver.get(url)
 
     def saveCookieToDB(self):
-        pass
         chromeCookies = Chrome.driver.get_cookies()
         chromeDB = TinyDB(FilenameManager.get({'enum':FilenameManager.ChromeData}))
         cookiesTable = chromeDB.table("Cookies")
         cookiesTable.insert_multiple(chromeCookies)
         chromeDB.close()
-        
 
     def loadCookieFromDB(self):
-        chromeCookies = Chrome.driver.get_cookies()
         chromeDB = TinyDB(FilenameManager.get({'enum':FilenameManager.ChromeData}))
         cookiesTable = chromeDB.table("Cookies")
         cookies=cookiesTable.all()
         chromeDB.close()
+    
+        requestSession = requests.Session()
+        for cookie in cookies:
+            requestSession.cookies.set(cookie['name'], cookie['value'])
+        requests.packages.urllib3.disable_warnings()
+        
+        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+        url='https://d11.emofid.com/easy/api/Money/GetRemain'
+        response1 = requests.options(url, verify = False)
+        response2 = requests.get(url,  headers=headers ,verify = False)
+        # {"realBalance":5523736.0,"blockedBalance":0.0,"accountBalance":5523736.0}
+        x=1
+
+        
     def testResponce(self):
         pass
         theSubjectsTableData = theSubjectsTable.all()
