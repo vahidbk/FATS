@@ -5,45 +5,61 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Run (external)",
+            "name": "UI (Run UI: Internal), Python",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Codes\\runUI.py",
+            "preLaunchTask": "PysideUiGenerator",
+            "console": "integratedTerminal"
+            
+        }, 
+        {
+            "name": "RE (Run: External), Python",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}\\Codes\\run.py",
+            "preLaunchTask": "PysideUiGenerator",
             "console": "externalTerminal"
+            
         },        
         {
-            "name": "Python: Run (integrated)",
+            "name": "RI (Run: Integrated), Python",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}\\Codes\\run.py",
+            "preLaunchTask": "PysideUiGenerator",
             "console": "integratedTerminal"
         },
         {
-            "name": "Python: Current File (external)",
+            "name": "CE (Current File: External), Python",
             "type": "python",
             "request": "launch",
             "program": "${file}",
+            "preLaunchTask": "PysideUiGenerator",
             "console": "externalTerminal"
         },
         {
-            "name": "Python: Current File (integrated)",
+            "name": "CI (Current File: Integrated), Python",
             "type": "python",
             "request": "launch",
             "program": "${file}",
+            "preLaunchTask": "PysideUiGenerator",
             "console": "integratedTerminal"
         },
         {
-            "name": "Python: Test File (external)",
+            "name": "TE (Test File: External), Python",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}\\Codes\\test.py",
+            "preLaunchTask": "PysideUiGenerator",
             "console": "externalTerminal"
         },
         {
-            "name": "Python: Service (external)",
+            "name": "SE (Service: External), Python",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}\\Codes\\Service.py",
+            "preLaunchTask": "PysideUiGenerator",
             "console": "externalTerminal"
         }
     ]

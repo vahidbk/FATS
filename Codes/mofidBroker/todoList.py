@@ -1,4 +1,10 @@
-#TODO Extract Halal Companies and travesal over them
+#TODO connect button to workers
+#TODO create Ui for easy Trader
+#TODO پیداکردن روش خودکار بررسی  کروم بدون نمایش
+#TODO خرید و فروش خودکار
+#TODO مفید تریدر در ساعت خاص تست شود برای بازار طلای زر
+#TODO اتصال پیامکبه خرید و فروش
+
 #TODO Extract letter type for data extraction from codal
 #TODO Extract list of key value in SoratHayeMali
 #TODO Extract List Of All Valid information in 'list of key value in SoratHayeMali'
@@ -19,9 +25,7 @@
 #TODO مقایسه روزهای معامله در صنعت
 #TODO استخراج حقیق و حقوقی و پول هوشمند
 
-#TODO خرید و فروش خودکار
-#TODO مفید تریدر در ساعت خاص تست شود برای بازار طلای زر
-#TODO اتصال پیامکبه خرید و فروش
+
 
 #todo EasyTrader download https://pypi.org/project/selenium-wire/
 # Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36

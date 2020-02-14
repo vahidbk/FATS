@@ -22,6 +22,14 @@
             },
             // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
-        }
+        },
+		{
+            "label": "PysideUiGenerator",
+            "command": "python.exe", 
+            "args": [".vscode/convertQtFileToPy.py"],
+			//"command": "pyuic5.exe", 
+			//"args": ["D:/Programming/Project/FATS/Codes/mofidBroker/mainwindow-ui.ui", "-o", "D:/Programming/Project/FATS/Codes/mofidBroker/mainwindow.py"],
+			"type": "shell"
+		}
     ]
 }

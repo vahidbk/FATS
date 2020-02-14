@@ -49,21 +49,25 @@ def createDirectory(path):
 
 #FilenameManager.get({'enum':FilenameManager.CodalRawData,'symbol':symbol['sy']})
 class FilenameManager(Enum):
-    Temp=0
+    Temp = 0
     CodalLinks = 1
     Groups = 2
     HalalGroup = 3
-    CodalRawData = 4
-    CodalSoratMaliSheetId = 5
-    TagData = 6
-    CatchHTML = 7
-    LoginData = 8
+    ChromeData = 4
+    ChromeProfile = 5
+    CodalRawData = 6
+    CodalSoratMaliSheetId = 7
+    TagData = 8
+    CatchHTML = 9
+    LoginData = 10
     def get(params):
         value=params['enum']
         if value==FilenameManager.Temp:result=params['filename']
         elif value==FilenameManager.CodalLinks:result=createDirectory('DB/Symbols/'+params['symbol']+"/")+'CodalLinks.json'
         elif value==FilenameManager.Groups:result=createDirectory('DB/General/')+'Groups.json'
         elif value==FilenameManager.HalalGroup:result=createDirectory('StaticDB/')+'halalGroup.json'
+        elif value==FilenameManager.ChromeData:result=createDirectory('DB/General/')+'ChromeData.json'
+        elif value==FilenameManager.ChromeProfile:result=createDirectory('DB/General/ChromepProfile/')
         elif value==FilenameManager.CodalRawData:result=createDirectory('DB/Symbols/'+params['symbol']+"/")+'CodalRawData.json'
         elif value==FilenameManager.CodalSoratMaliSheetId:result=createDirectory('DB/')+'CodalSoratMaliSheetId.json'
         elif value==FilenameManager.TagData:result=createDirectory('DB/Symbols/'+params['symbol']+"/")+'TagData.json'
@@ -118,6 +122,7 @@ class Chrome:
                 options.add_argument('window-size=1920x1080')
                 options.add_argument("disable-gpu")
             options.add_argument("--log-level=3");
+            options.add_argument("user-data-dir="+FilenameManager.get({'enum':FilenameManager.ChromeProfile})) #Path to your chrome profile
             chromeWebDriverPath = 'D:/Desktop/بورس/04-pyton/chromedriver_win32/chromedriver.exe'
             Chrome.driver = webdriver.Chrome(executable_path=chromeWebDriverPath, options=options)
     def __del__(self):
@@ -180,6 +185,11 @@ class GroupProcess:
             if symbol['Group'] in halalGroup:
                 if (halalGroup[symbol['Group']]=="Haram"):
                     continue
+              
+#            if not(symbol['Group'] =="23"): 
+#               #"فراورده هاي نفتي، كك و سوخت هسته اي"
+#                continue
+            
             callback(symbol, symbolIndex, symbolsCounter)
         groupDB.close()
    
