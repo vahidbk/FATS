@@ -114,7 +114,6 @@ def showTag(symbol):
     plt.show() 
 
 def doOperation(symbol, symbolIndex, symbolsCounter):
-    #todo: extract co list name and create folder for them 
     ## TrackNo_ValueNumber
     print("------"+persianToFinglish(symbol['sy']))        
     showTag(symbol['sy'])

@@ -117,9 +117,7 @@ def saveSodVaZianToJson(table, chrome, url, sheetId, title, tracingNo, symbol, c
         print("Error In TrackingNo:"+str(tracingNo)+", Symbol:"+persianToFinglish(symbol))
         print(f'Error SodVaZianUrlToJson Comment: {err}') 
 
-#TODO use group callback to traverse over data
-#TODO extract list of SoratHaye mali from sod and zian
-    
+   
 def updateCodalListOfSoratMali(chrome, symbol, codalRawDataTableName, sheetId):
     
     ## TrackNo_ValueNumber
@@ -234,7 +232,6 @@ def updateCodalSoratMali(chrome, symbol):
 
  
 def doOperation(symbol, symbolIndex, symbolsCounter):
-    #todo: extract co list name and create folder for them 
     ## TrackNo_ValueNumber
     print("------"+persianToFinglish(symbol['sy']))        
     chrome = Chrome(False)

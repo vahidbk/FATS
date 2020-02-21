@@ -1,4 +1,8 @@
-#TODO load cookie with response for easy trader
+
+#RoadMap 13981125: خرید در ابتدای صبح در ابتدای صف
+#RoadMap 13981126: استخراج سهام های پایدار با کمک بالاتر از بازار
+
+#TODO use selenium-request
 #TODO create Ui for easy Trader
 #TODO پیداکردن روش خودکار بررسی  کروم بدون نمایش
 #TODO خرید و فروش خودکار

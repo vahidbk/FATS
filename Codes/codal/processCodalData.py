@@ -3,8 +3,7 @@ from codal.TagGeneratorSozAndZian import *
                 
 
 def doOperation(symbol, symbolIndex, symbolsCounter):
-    #todo: extract co list name and create folder for them 
-    ## TrackNo_ValueNumber
+     ## TrackNo_ValueNumber
     print("------"+persianToFinglish(symbol['sy']))        
     tagGeneratorSozAndZian(symbol['sy'])
     print("\n"+str(symbolIndex)+'/'+str(symbolsCounter)+":"+"-----")

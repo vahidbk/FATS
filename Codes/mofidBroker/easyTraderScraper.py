@@ -1,13 +1,11 @@
 from bs4 import BeautifulSoup
-import requests
-import requests.packages.urllib3
 import jsons
 import time
 from tinydb import TinyDB, Query
 from tinydb import where
 from CommonDefs import *
 import urllib.request
-from selenium.webdriver.common.keys import Keys
+from requestium import Session, Keys
 
 class EasyTraderScraperClass:
     chrome=None

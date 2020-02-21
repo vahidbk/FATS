@@ -3,9 +3,7 @@ from tinydb import where
 from CommonDefs import *
 
 
- 
 def doOperation(symbol, symbolIndex, symbolsCounter):
-    #todo: extract co list name and create folder for them 
 
     codalRawDataDB = TinyDB(FilenameManager.get({'enum':FilenameManager.CodalRawData,'symbol':symbol['sy']}))
     soratMaliTableDataTable = codalRawDataDB.table('SoratHayeMali')
