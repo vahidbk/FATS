@@ -42,21 +42,21 @@
       <item>
        <widget class="QPushButton" name="loginEasyTraderButton">
         <property name="text">
-         <string>loginEasyTrader</string>
+         <string>autoLoginEasyTrader</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="saveCookieToDBButton">
         <property name="text">
-         <string>saveCookieToDB</string>
+         <string>EasyTrader</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="loadCookieFromDBButton">
         <property name="text">
-         <string>loadCookieFromDB</string>
+         <string>getRemainMoneyByCode</string>
         </property>
        </widget>
       </item>

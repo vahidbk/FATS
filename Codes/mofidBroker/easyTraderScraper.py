@@ -8,18 +8,23 @@ import urllib.request
 from requestium import Session, Keys
 
 class EasyTraderScraperClass:
-    chrome=None
+    session=None
     
     def __init__(self):
         pass
     
     def openChrome(self):
-        self.chrome = Chrome(True)
+        options = {'--log-level':'3', 'user-data-dir':FilenameManager.get({'enum':FilenameManager.ChromeProfile})}
+        self.session = Session(webdriver_path='D:/Desktop/بورس/04-pyton/chromedriver_win32/chromedriver.exe', \
+            browser='chrome',\
+            default_timeout=15,\
+            webdriver_options=options)
         
     def openEasyTraderInChrome(self):   
         url="https://account.emofid.com/Login"
-        Chrome.driver.get(url)
-        self.pageSource = Chrome.driver.page_source
+        #self.session.transfer_session_cookies_to_driver()
+        self.session.driver.get(url)
+        self.pageSource = self.session.driver.page_source
     
     def loginEasyTrader(self):
         mofidEasyTrader = "MofidEasyTrader"
@@ -43,41 +48,33 @@ class EasyTraderScraperClass:
             requestVerificationToken = requestVerificationTokenInput.attrs['value']
         except Exception as err:
             print(f'Error Comment: {err}')
-        elem = Chrome.driver.find_element_by_name("Username")
+        elem = self.session.driver.find_element_by_name("Username")
         elem.clear()
         elem.send_keys(username)
-        elem = Chrome.driver.find_element_by_name("Password")
+        elem = self.session.driver.find_element_by_name("Password")
         elem.clear()
         elem.send_keys(password)
         elem.send_keys(Keys.RETURN)
         url="https://d.easytrader.emofid.com"
-        Chrome.driver.get(url)
+        self.session.driver.get(url)
 
     def saveCookieToDB(self):
-        chromeCookies = Chrome.driver.get_cookies()
-        chromeDB = TinyDB(FilenameManager.get({'enum':FilenameManager.ChromeData}))
-        cookiesTable = chromeDB.table("Cookies")
-        cookiesTable.insert_multiple(chromeCookies)
-        chromeDB.close()
+        url="https://d.easytrader.emofid.com"
+        self.session.driver.get(url)
 
     def loadCookieFromDB(self):
-        chromeDB = TinyDB(FilenameManager.get({'enum':FilenameManager.ChromeData}))
-        cookiesTable = chromeDB.table("Cookies")
-        cookies=cookiesTable.all()
-        chromeDB.close()
-    
-        requestSession = requests.Session()
-        for cookie in cookies:
-            requestSession.cookies.set(cookie['name'], cookie['value'])
-        requests.packages.urllib3.disable_warnings()
-        
-        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
-        url='https://d11.emofid.com/easy/api/Money/GetRemain'
-        response1 = requests.options(url, verify = False)
-        response2 = requests.get(url,  headers=headers ,verify = False)
-        # {"realBalance":5523736.0,"blockedBalance":0.0,"accountBalance":5523736.0}
-        x=1
+        self.session.transfer_driver_cookies_to_session()
+        #self.session.post('http://www.google.com/', data={'key1': 'value1'}) 
+        #self.sessions.get('http://www.google.com/') 
+        #self.session.options('http://www.google.com/') 
 
+
+        url='https://d11.emofid.com/easy/api/Money/GetRemain'
+        response1 = self.session.options(url, verify = False)
+        response2 = self.session.get(url,verify = False)
+        # {"realBalance":5523736.0,"blockedBalance":0.0,"accountBalance":5523736.0}
+        #x=1
+        pass
         
     def testResponce(self):
         pass
@@ -89,4 +86,4 @@ class EasyTraderScraperClass:
         # response = requests.post(url \
         #     }, verify = False, timeout=(10, 20))
     def closeChrome(self):
-        del self.chrome
+        self.session.chrome.close()
