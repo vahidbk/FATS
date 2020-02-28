@@ -2,10 +2,7 @@
 #RoadMap 13981125: خرید در ابتدای صبح در ابتدای صف
 #RoadMap 13981126: استخراج سهام های پایدار با کمک بالاتر از بازار
 
-#TODO use selenium-request
-#TODO create Ui for easy Trader
-#TODO پیداکردن روش خودکار بررسی  کروم بدون نمایش
-#TODO خرید و فروش خودکار
+#TODO create Ui for easy Trader and buy and sell
 #TODO مفید تریدر در ساعت خاص تست شود برای بازار طلای زر
 #TODO اتصال پیامکبه خرید و فروش
 
