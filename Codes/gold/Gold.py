@@ -13,11 +13,12 @@ import threading
 def getOns():
     try:
         requests.packages.urllib3.disable_warnings()
-        url="https://data-asg.goldprice.org/dbXRates/USD"
+        url="https://www.kitco.com/charts/livegold.html"
         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
         response = requests.get(url, headers=headers, verify = False, timeout=(10, 20))
-        onsJson = response.json()
-        ons = float(onsJson['items'][0]['xauPrice'])
+        soup = BeautifulSoup(response.text,"lxml")
+        div = soup.find_all('span', attrs={'id':'sp-bid'})[0]
+        ons=persianStrToInt(div.get_text(strip=True, separator=',').replace("\n", ""))
         return {'ons':ons}
     except Exception as err:
         print(f'Other error occurred IN Connection To get Ons: {err}') 
@@ -81,5 +82,6 @@ def updateGoldData():
         result[key]=value
     for key,value in GoldWithDolarLast.items():
         result[key]=value 
+    result['dolar']=dolar
     return result
 
