@@ -114,7 +114,7 @@ class Chrome:
     counter=0
     def __init__(self, showUI):
         Chrome.counter+=1
-        print(Chrome.counter)
+        #print(Chrome.counter)
         if not (Chrome.driver):
             options = webdriver.ChromeOptions()
             if not (showUI):

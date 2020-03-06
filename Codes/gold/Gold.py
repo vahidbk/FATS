@@ -19,7 +19,7 @@ def getOns():
         soup = BeautifulSoup(response.text,"lxml")
         div = soup.find_all('span', attrs={'id':'sp-bid'})[0]
         ons=persianStrToInt(div.get_text(strip=True, separator=',').replace("\n", ""))
-        return {'ons':ons}
+        return {'ons':float(ons)}
     except Exception as err:
         print(f'Other error occurred IN Connection To get Ons: {err}') 
 
@@ -44,8 +44,8 @@ def getGold():
         yesterdaMaxPrice=persianStrToInt(h3.get_text(strip=True, separator=',').replace("\n", ""))
         h3 = divs[19].find('h3')
         yesterdayMinPrice=persianStrToInt(h3.get_text(strip=True, separator=',').replace("\n", ""))
-        return {'goldLastPrice':lastPrice, 'goldMaxPrice':maxPrice, 'goldMinPrice':minPrice, \
-                'GoldYesterdayClosePrice':yesterdayClosePrice, 'goldYesterdayMaxPrice':yesterdaMaxPrice, 'goldYesterdayMinPrice':yesterdayMinPrice}
+        return {'goldLastPrice':int(lastPrice), 'goldMaxPrice':int(maxPrice), 'goldMinPrice':int(minPrice), \
+                'GoldYesterdayClosePrice':int(yesterdayClosePrice), 'goldYesterdayMaxPrice':int(yesterdaMaxPrice), 'goldYesterdayMinPrice':int(yesterdayMinPrice)}
     except Exception as err:
         print(f'Other error occurred IN Connection To get Ons: {err}') 
 

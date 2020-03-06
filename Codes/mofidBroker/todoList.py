@@ -2,9 +2,10 @@
 #RoadMap 13981125: خرید در ابتدای صبح در ابتدای صف
 #RoadMap 13981126: استخراج سهام های پایدار با کمک بالاتر از بازار
 
+#TODO 13981209 اتصال پیامک به بازار ارز و طلا
 #TODO create Ui for easy Trader and buy and sell
 #TODO مفید تریدر در ساعت خاص تست شود برای بازار طلای زر
-#TODO اتصال پیامکبه خرید و فروش
+#TODO اتصال پیامک به خرید و فروش
 
 #TODO Extract letter type for data extraction from codal
 #TODO Extract list of key value in SoratHayeMali

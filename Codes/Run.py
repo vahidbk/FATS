@@ -1,10 +1,13 @@
 from codal.Groups import updateGroups
-from codal.CodalLinks import updateCodalLetterLinks
-from codal.CodalSavePages import updateCodalSavePages
 from gold.Gold import updateGoldData
-from codal.processCodalData import processCodalDataToGenerateTags
 import json
-from codal.showTagData import showTagData
+
+# from codal.CodalLinks import updateCodalLetterLinks
+# from codal.CodalSavePages import updateCodalSavePages
+
+# from codal.processCodalData import processCodalDataToGenerateTags
+
+# from codal.showTagData import showTagData
 
 
 #import mofidBroker.easyTraderScraper
