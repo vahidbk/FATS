@@ -144,7 +144,87 @@ class EasyTraderScraperClass:
         # <div _ngcontent-wpm-c20="" class="d-order-list-item mb-2 ng-star-inserted"><!----><div _ngcontent-wpm-c20="" d-order-list-item="" _nghost-wpm-c31="" class="ng-star-inserted"><div _ngcontent-wpm-c31="" class="stock shadow-sm user-select-none buy" title="خطا در ارسال سفارش"><div _ngcontent-wpm-c31="" class="py-2 px-2 position-relative"><!----><div _ngcontent-wpm-c31="" class="order-stock-symbol d-flex justify-content-between align-items-center mb-2"><div _ngcontent-wpm-c31="" class="d-flex mb-0"><!----><h6 _ngcontent-wpm-c31="" class="mb-0">شگویا</h6></div><div _ngcontent-wpm-c31="" class="d-flex align-items-center pr-3"><span _ngcontent-wpm-c31="" class="mdi mdi-20px line-height-none mdi-alert text-warning"></span><div _ngcontent-wpm-c31="" class="stock-actions"><!----><!----><!----><!----><span _ngcontent-wpm-c31="" class="icon mdi mdi-18px px-1 mdi-trash-can-outline text-muted ng-star-inserted" title="حذف"></span></div></div></div><div _ngcontent-wpm-c31="" class="d-flex justify-content-between"><span _ngcontent-wpm-c31="">100</span><span _ngcontent-wpm-c31="" class="text-start"> ( 0% ) 0 </span></div><div _ngcontent-wpm-c31="" class="progress my-1"><div _ngcontent-wpm-c31="" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar" role="progressbar"></div></div><div _ngcontent-wpm-c31="" class="d-flex justify-content-between align-items-center"><span _ngcontent-wpm-c31="" class="order-price">4,380 ریال</span><span _ngcontent-wpm-c31=""><small _ngcontent-wpm-c31="" class="order-date text-muted"></small><!----><!----></span></div></div></div></div><!----><!----></div>
         # انجام شده
         # <div _ngcontent-ujl-c20="" class="d-order-list-item mb-2"><!----><div _ngcontent-ujl-c20="" d-order-list-item="" _nghost-ujl-c31=""><div _ngcontent-ujl-c31="" class="stock shadow-sm user-select-none buy done" title="انجام شده"><div _ngcontent-ujl-c31="" class="py-2 px-2 position-relative"><!----><div _ngcontent-ujl-c31="" class="order-stock-symbol d-flex justify-content-between align-items-center mb-2"><div _ngcontent-ujl-c31="" class="d-flex mb-0"><!----><h6 _ngcontent-ujl-c31="" class="mb-0">سشرق</h6></div><div _ngcontent-ujl-c31="" class="d-flex align-items-center pr-3"><span _ngcontent-ujl-c31="" class="mdi mdi-20px line-height-none mdi-check-all text-primary"></span><div _ngcontent-ujl-c31="" class="stock-actions"><!----><!----><!----><!----></div></div></div><div _ngcontent-ujl-c31="" class="d-flex justify-content-between"><span _ngcontent-ujl-c31="">1,000</span><span _ngcontent-ujl-c31="" class="text-start"> ( 100% ) 1,000 </span></div><div _ngcontent-ujl-c31="" class="progress my-1"><div _ngcontent-ujl-c31="" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar" role="progressbar" style="width: 100%;"></div></div><div _ngcontent-ujl-c31="" class="d-flex justify-content-between align-items-center"><span _ngcontent-ujl-c31="" class="order-price">7,065 ریال</span><span _ngcontent-ujl-c31=""><small _ngcontent-ujl-c31="" class="order-date text-muted">08:42:08 1398/12/17</small><!----><!----></span></div></div></div></div><!----><!----></div>
+     
+    def initializeBuySymbol(self):
+        ## مسیر رسیدن به پنجره
+        ## <div _ngcontent-ojc-c20="" class="stocks flex-fill overflow-auto h-100">
+        inputStr="//div[@class='stocks flex-fill overflow-auto h-100']"
+        rootElem = Chrome.driver.find_elements_by_xpath(inputStr)[0]
+        ## <order-form _ngcontent-ojc-c20="" _nghost-ojc-c30="">
+        inputStr="//order-form"
+        orderFormElem = rootElem.find_elements_by_xpath(inputStr)[0]
+        ## <div _ngcontent-ojc-c30="" class="stock shadow-sm mb-2 user-select-none overflow-hidden buy">
+        #inputStr="//div[@class='stock shadow-sm mb-2 user-select-none overflow-hidden buy']"
+        #orderForm = root.find_elements_by_xpath(inputStr)[0]
+        # <div _ngcontent-ojc-c30="" class="p-2 position-relative">
+            #عنوان سهم، خرید یا فروش و بستن پنجره
+            # <div _ngcontent-ojc-c30="" class="mb-2 order-stock-symbol d-flex justify-content-between align-items-center">
+        inputStr="//div[@class='mb-2 order-stock-symbol d-flex justify-content-between align-items-center']"
+        titleMenuElem = orderFormElem.find_elements_by_xpath(inputStr)[0]
+                ##نام نماد
+                ##<div _ngcontent-ojc-c30="" class="h6 mb-0 d-flex"> طلا </div>
+        inputStr="//div[@class='h6 mb-0 d-flex']"
+        titleMenuSymbolElem = titleMenuElem.find_elements_by_xpath(inputStr)[0]
+        titleMenuSymbol=titleMenuSymbolElem.get_text(strip=True).replace("\n", "")
+                ##خرید یا فروش بودن
+                ##<div _ngcontent-ojc-c30="" class="text-right order-side d-flex align-items-center order-side--buy">
+        inputStr="//div[@class='text-right order-side d-flex align-items-center order-side--buy']"
+        buyElem = titleMenuElem.find_elements_by_xpath(inputStr)[0]                
+                ##or
+                ##<div _ngcontent-ojc-c30="" class="text-right order-side d-flex align-items-center order-side--sell">
+        inputStr="//div[@class='text-right order-side d-flex align-items-center order-side--sell']"
+        sellElem = titleMenuElem.find_elements_by_xpath(inputStr)[0]                 
+                ##بستن پنجره
+                ##<span _ngcontent-ojc-c30="" class="mdi mdi-18px px-1 rounded mdi-close text-grey"></span>
+        inputStr="//span[@class='mdi mdi-18px px-1 rounded mdi-close text-grey']"
+        closeIconElem = titleMenuElem.find_elements_by_xpath(inputStr)[0]                 
+            # فرم تعداد و قیمت سهم            
+            # <form _ngcontent-ojc-c30="" novalidate="" class="ng-pristine ng-valid ng-touched">
+        inputStr="//form[@class='ng-pristine ng-valid ng-touched']"
+        volumePriceMenuElem = orderFormElem.find_elements_by_xpath(inputStr)[0]
+            #     <div _ngcontent-ojc-c30="" class="order-form-field">
+            #         <input inputmode="decimal" autocomplete="off" class="dx-texteditor-input" type="text" spellcheck="false" min="1" max="undefined" step="5000" aria-valuemin="1" aria-valuemax="" aria-valuenow="5000" role="spinbutton">
+        inputStr="//input[@class='dx-texteditor-input' @min='1']"
+        volumeItemElem = orderFormElem.find_elements_by_xpath(inputStr)[0]
+            
+            #     <div _ngcontent-ojc-c30="" class="order-form-field mt-1">
+            #         <input inputmode="decimal" autocomplete="off" class="dx-texteditor-input" type="text" spellcheck="false" min="undefined" max="undefined" step="25" aria-valuemin="" aria-valuemax="" aria-valuenow="5001" role="spinbutton">
+        inputStr="//input[@class='dx-texteditor-input' @min='undefined']"
+        priceItemElem = orderFormElem.find_elements_by_xpath(inputStr)[0]            
+        #TODO 0 This Line next time    
+            # کلید انجام عملیات یا پیشنویس        
+            # <div _ngcontent-ojc-c30="" class="d-flex">
+            #     <button _ngcontent-ojc-c30="" class="col-7 btn btn-sm btn-success flex-grow-1 px-0" title="(Enter)" type="submit"><!----><span _ngcontent-ojc-c30="">ارسال خرید</span><!----></button>
+            #     <button _ngcontent-ojc-c30="" class="col btn btn-sm mr-1 px-0 btn-outline-warning" title="(Esc)" type="button">پیش&zwnj;نویس</button>
+            
+            # اطلاعات آماری منوی خرید و فروش
+            # <div _ngcontent-ojc-c30="" class="mt-2 medium">   
+            #     <div _ngcontent-ojc-c30="" class="row">
+            #         <span _ngcontent-ojc-c30="" class="col-6 text-reverse-50">دارایی فعلی : </span>
+            #         <span _ngcontent-ojc-c30="" class="col-6 text-start cup" dir="ltr">0</span>
+            #     <div _ngcontent-ojc-c30="" class="row">
+            #         <span _ngcontent-ojc-c30="" class="col-6 text-reverse-50">قیمت سر&zwnj;به&zwnj;سر: </span>
+            #         <span _ngcontent-ojc-c30="" class="col-6 text-start" dir="ltr">53,122</span>
+
+            #     <div _ngcontent-ojc-c30="" class="row">
+            #         <span _ngcontent-ojc-c30="" class="col-6 text-reverse-50">هزینه معامله: </span>
+            #         <span _ngcontent-ojc-c30="" class="col-6 text-start" dir="ltr">609,500</span>
+            #     <div _ngcontent-ojc-c30="" class="row">
+            #         <span _ngcontent-ojc-c30="" class="col-6 text-reverse-50">جمع کل:</span>
+            #         <span _ngcontent-ojc-c30="" class="col-6 text-start" dir="ltr">530,609,500</span>
+             
+        pass
+
+    def initializeSellSymbol(self):
         
+        pass
+    
+    def fillBuySellForm(self):
+        pass
+    
+    def DoneBuySellOperationNow():
+        pass
+       
     def lastCostSymbol(self):
         pass
     
@@ -180,18 +260,7 @@ class EasyTraderScraperClass:
     
 
     
-    def initializeBuySymbol(self):
-        
-        pass
-
-    def initializeSellSymbol(self):
-        pass
     
-    def fillBuySellForm(self):
-        pass
-    
-    def DoneBuySellOperationNow():
-        pass
     
 
     def saveCookieToDB(self):

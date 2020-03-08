@@ -4,6 +4,7 @@
 #RoadMap 13981215: استخراج اطلاعات بنیادی
 
 #TODO 13981215 پرکردن فیلد های خرید و فروش خودکار
+#TODO 13981215 بازکردن مجدد کروم در یک برنامه
 #TODO 13981215 ذخیره اطلاعات مربوط به خرید و فروش های روز براس وضعیت گرارش ایزی تریدر
 #TODO 13951215 یافتن نفر جلوتر در صف خرید و فروش
 #TODO 13981215 خودکار سازی فرآیند خرید با قیمت مشخص در زمان مشخص
@@ -13,6 +14,7 @@
 #TODO مفید تریدر در ساعت خاص تست شود برای بازار طلای زر
 #TODO اتصال پیامک به خرید و فروش
 
+#TODO بررسی تهران استوک در بازیابی قیمت سهام بر اساس منابع و سورس کد آن که از کجا بر می دارد اطلاعات را
 #TODO Extract letter type for data extraction from codal
 #TODO Extract list of key value in SoratHayeMali
 #TODO Extract List Of All Valid information in 'list of key value in SoratHayeMali'
