@@ -89,16 +89,9 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
-     <widget class="QPushButton" name="openSearchMenuButton">
+     <widget class="QPushButton" name="computeGoldButton">
       <property name="text">
-       <string>openSearchMenu</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="closeSearchMenuButton">
-      <property name="text">
-       <string>closeSearchMenu</string>
+       <string>computeGold</string>
       </property>
      </widget>
     </item>
@@ -110,16 +103,23 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="closeSearchMenuButton">
       <property name="text">
-       <string>4</string>
+       <string>closeSearchMenu</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="startBuySymbolButton">
       <property name="text">
-       <string>5</string>
+       <string>startBuySymbol</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="startSellSymbolButton">
+      <property name="text">
+       <string>startSellSymbol</string>
       </property>
      </widget>
     </item>
