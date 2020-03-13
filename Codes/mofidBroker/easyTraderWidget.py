@@ -52,8 +52,15 @@ class AppWindow(QDialog):
         self.ui.startBuySymbolButton.clicked.connect(self.easyTraderScraper.startBuySymbol)
         self.ui.startSellSymbolButton.clicked.connect(self.easyTraderScraper.startSellSymbol)
 
-
-        self.ui.pushButton_15.clicked.connect(self.computeGold)
+        self.ui.initializeBuyAndSellSymbolButton.clicked.connect(self.easyTraderScraper.initializeBuyAndSellSymbol)
+        
+        self.ui.doOperationBuyAndSellButton.clicked.connect(self.easyTraderScraper.doOperationBuyAndSell)
+        self.ui.syncWindowsTimeButton.clicked.connect(self.easyTraderScraper.syncWindowsTime)
+        
+        self.ui.doOperationAt_8_30_TimeButton.clicked.connect(self.easyTraderScraper.doOperationAt_8_30_Time)
+        
+        self.ui.autoRobotBuyTheSymbolButton.clicked.connect(self.easyTraderScraper.autoRobotBuyTheSymbol)        
+        
         
         self.show() 
         

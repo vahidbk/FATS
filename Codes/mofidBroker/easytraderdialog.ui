@@ -124,16 +124,16 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_6">
+     <widget class="QPushButton" name="initializeBuyAndSellSymbolButton">
       <property name="text">
-       <string>6</string>
+       <string>initializeBuyAndSellSymbol</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_7">
+     <widget class="QPushButton" name="doOperationBuyAndSellButton">
       <property name="text">
-       <string>7</string>
+       <string>doOperationBuyAndSell</string>
       </property>
      </widget>
     </item>
@@ -150,23 +150,23 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_5">
     <item>
-     <widget class="QPushButton" name="pushButton_15">
+     <widget class="QPushButton" name="syncWindowsTimeButton">
       <property name="text">
-       <string>15</string>
+       <string>syncWindowsTime</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_16">
+     <widget class="QPushButton" name="doOperationAt_8_30_TimeButton">
       <property name="text">
-       <string>16</string>
+       <string>doOperationAt_8_30_Time</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_17">
+     <widget class="QPushButton" name="autoRobotBuyTheSymbolButton">
       <property name="text">
-       <string>17</string>
+       <string>autoRobotBuyTheSymbol</string>
       </property>
      </widget>
     </item>
