@@ -18,8 +18,8 @@ class EasyTraderScraperClass:
         
     def openEasyTraderInChrome(self):   
         url="https://account.emofid.com/Login"
-        Chrome.driver.get(url)
-        self.pageSource = Chrome.driver.page_source
+        self.chrome.driver.get(url)
+        self.pageSource = self.chrome.driver.page_source
     
     def loginEasyTrader(self):
         mofidEasyTrader = "MofidEasyTrader"
@@ -43,23 +43,23 @@ class EasyTraderScraperClass:
             requestVerificationToken = requestVerificationTokenInput.attrs['value']
         except Exception as err:
             print(f'Error Comment: {err}')
-        elem = Chrome.driver.find_element_by_name("Username")
+        elem = self.chrome.driver.find_element_by_name("Username")
         elem.clear()
         elem.send_keys(username)
-        elem = Chrome.driver.find_element_by_name("Password")
+        elem = self.chrome.driver.find_element_by_name("Password")
         elem.clear()
         elem.send_keys(password)
         elem.send_keys(Keys.RETURN)
         url="https://d.easytrader.emofid.com"
-        Chrome.driver.get(url)
+        self.chrome.driver.get(url)
 
 
     def loadEasyTrader(self):
         url="https://d.easytrader.emofid.com"
-        Chrome.driver.get(url) 
+        self.chrome.driver.get(url) 
 
     def openSearchMenu(self): #internal
-        elems = Chrome.driver.find_elements_by_class_name("menu_item_panel")
+        elems = self.chrome.driver.find_elements_by_class_name("menu_item_panel")
         searchMenu=None
         searchString="جستجو"
         # for elem in elems:
@@ -69,7 +69,7 @@ class EasyTraderScraperClass:
         return searchMenu
     
     def closeSearchMenu(self): #internal
-        Chrome.driver.send_keys(Keys.ESCAPE)
+        self.chrome.driver.send_keys(Keys.ESCAPE)
     
     #todo:test it    
     def focusOnSymbol(self):
@@ -80,19 +80,19 @@ class EasyTraderScraperClass:
         elem.click()
         
         inputStr="//input[@placeholder='نماد مورد جستجو را وارد کنید']"
-        elem = Chrome.driver.find_element_by_xpath(inputStr)
+        elem = self.chrome.driver.find_element_by_xpath(inputStr)
         if (self.Symbol):
             symbol=self.Symbol
         else:
             symbol="سشرق"
         elem.send_keys(symbol)
-        Chrome.driver.implicitly_wait(1) 
+        self.chrome.driver.implicitly_wait(1) 
         time.sleep(1)
         elem.send_keys(Keys.DOWN)
         elem.send_keys(Keys.RETURN)
         
         try:
-            Chrome.driver.find_element_by_xpath(inputStr)
+            self.chrome.driver.find_element_by_xpath(inputStr)
             print(f'Error : Not focus on symbol') 
             self.closeSearchMenu()
             return False 
@@ -103,32 +103,32 @@ class EasyTraderScraperClass:
     
     def startBuySymbol(self):
         inputStr="//button[@class='btn btn-sm btn-outline-success btn-block ml-1']"
-        elems = Chrome.driver.find_elements_by_xpath(inputStr)
+        elems = self.chrome.driver.find_elements_by_xpath(inputStr)
         elems[0].click()
 
     #todo:test it
     def startSellSymbol(self):
         inputStr="//button[@class='btn btn-sm btn-outline-danger btn-block mt-0 mr-1']"
-        elems = Chrome.driver.find_elements_by_xpath(inputStr)
+        elems = self.chrome.driver.find_elements_by_xpath(inputStr)
         elems[0].click()
     
     #todo:test it    
     def getCurrentFocusedSymbol(self):
-        elem = Chrome.driver.find_elements_by_xpath("//h5[@class='mb-0 text-truncate']")
+        elem = self.chrome.driver.find_elements_by_xpath("//h5[@class='mb-0 text-truncate']")
         return elem[0].get_text(strip=True).replace("\n", "")
     
     #todo:test it
     def getCurrentFocusedSymbolFullname(self):
-        elems = Chrome.driver.find_elements_by_xpath("//h5[@class='mb-0 text-truncate']")
-        next_sibling = Chrome.driver.execute_script("""return arguments[0].nextElementSibling""", elems[0])
+        elems = self.chrome.driver.find_elements_by_xpath("//h5[@class='mb-0 text-truncate']")
+        next_sibling = self.chrome.driver.execute_script("""return arguments[0].nextElementSibling""", elems[0])
         return next_sibling
     
     #todo:test it
     def getcurrentStatusOfBuyAndSellMenuStock(self):
         inputStr="//div[@class='stocks flex-fill overflow-auto h-100']"
-        root = Chrome.driver.find_elements_by_xpath(inputStr)[0]
+        root = self.chrome.driver.find_elements_by_xpath(inputStr)[0]
         inputStr="//div[@class='stock shadow-sm user-select-none buy']"
-        titleItem = Chrome.driver.find_elements_by_xpath(inputStr)[0]
+        titleItem = self.chrome.driver.find_elements_by_xpath(inputStr)[0]
         # BuySellMenuStatusStock
         # <div _ngcontent-fuj-c20="" class="stocks flex-fill overflow-auto h-100"><!----><!----><!----><div _ngcontent-fuj-c20="" class="d-order-list-item mb-2"><!----><div _ngcontent-fuj-c20="" d-order-list-item="" _nghost-fuj-c31=""><div _ngcontent-fuj-c31="" class="stock shadow-sm user-select-none buy" title="در حال ارسال به هسته معاملات"><div _ngcontent-fuj-c31="" class="py-2 px-2 position-relative"><!----><div _ngcontent-fuj-c31="" class="order-stock-symbol d-flex justify-content-between align-items-center mb-2"><div _ngcontent-fuj-c31="" class="d-flex mb-0"><!----><h6 _ngcontent-fuj-c31="" class="mb-0">گویان</h6></div><div _ngcontent-fuj-c31="" class="d-flex align-items-center pr-3"><span _ngcontent-fuj-c31="" class="mdi mdi-20px line-height-none mdi-check text-secondary"></span><div _ngcontent-fuj-c31="" class="stock-actions"><!----><!----><!----><span _ngcontent-fuj-c31="" class="icon mdi mdi-18px px-1 mdi-pencil-outline text-muted" title="ویرایش"></span><!----><span _ngcontent-fuj-c31="" class="icon mdi mdi-18px px-1 mdi-trash-can-outline text-muted" title="حذف"></span></div></div></div><div _ngcontent-fuj-c31="" class="d-flex justify-content-between"><span _ngcontent-fuj-c31="">3,000</span><span _ngcontent-fuj-c31="" class="text-start"> ( 0% ) 0 </span></div><div _ngcontent-fuj-c31="" class="progress my-1"><div _ngcontent-fuj-c31="" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar" role="progressbar" style="width: 0%;"></div></div><div _ngcontent-fuj-c31="" class="d-flex justify-content-between align-items-center"><span _ngcontent-fuj-c31="" class="order-price">4,380 ریال</span><span _ngcontent-fuj-c31=""><small _ngcontent-fuj-c31="" class="order-date text-muted">10:10:12 1398/12/17</small><!----><!----></span></div></div></div></div><!----><!----></div><div _ngcontent-fuj-c20="" class="d-order-list-item mb-2"><!----><div _ngcontent-fuj-c20="" d-order-list-item="" _nghost-fuj-c31=""><div _ngcontent-fuj-c31="" class="stock shadow-sm user-select-none buy done" title="انجام شده"><div _ngcontent-fuj-c31="" class="py-2 px-2 position-relative"><!----><div _ngcontent-fuj-c31="" class="order-stock-symbol d-flex justify-content-between align-items-center mb-2"><div _ngcontent-fuj-c31="" class="d-flex mb-0"><!----><h6 _ngcontent-fuj-c31="" class="mb-0">سشرق</h6></div><div _ngcontent-fuj-c31="" class="d-flex align-items-center pr-3"><span _ngcontent-fuj-c31="" class="mdi mdi-20px line-height-none mdi-check-all text-primary"></span><div _ngcontent-fuj-c31="" class="stock-actions"><!----><!----><!----><!----></div></div></div><div _ngcontent-fuj-c31="" class="d-flex justify-content-between"><span _ngcontent-fuj-c31="">1,000</span><span _ngcontent-fuj-c31="" class="text-start"> ( 100% ) 1,000 </span></div><div _ngcontent-fuj-c31="" class="progress my-1"><div _ngcontent-fuj-c31="" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar" role="progressbar" style="width: 100%;"></div></div><div _ngcontent-fuj-c31="" class="d-flex justify-content-between align-items-center"><span _ngcontent-fuj-c31="" class="order-price">7,065 ریال</span><span _ngcontent-fuj-c31=""><small _ngcontent-fuj-c31="" class="order-date text-muted">08:42:08 1398/12/17</small><!----><!----></span></div></div></div></div><!----><!----></div><div _ngcontent-fuj-c20="" class="d-order-list-item mb-2"><!----><div _ngcontent-fuj-c20="" d-order-list-item="" _nghost-fuj-c31=""><div _ngcontent-fuj-c31="" class="stock shadow-sm user-select-none buy done" title="انجام شده"><div _ngcontent-fuj-c31="" class="py-2 px-2 position-relative"><!----><div _ngcontent-fuj-c31="" class="order-stock-symbol d-flex justify-content-between align-items-center mb-2"><div _ngcontent-fuj-c31="" class="d-flex mb-0"><!----><h6 _ngcontent-fuj-c31="" class="mb-0">سشرق</h6></div><div _ngcontent-fuj-c31="" class="d-flex align-items-center pr-3"><span _ngcontent-fuj-c31="" class="mdi mdi-20px line-height-none mdi-check-all text-primary"></span><div _ngcontent-fuj-c31="" class="stock-actions"><!----><!----><!----><!----></div></div></div><div _ngcontent-fuj-c31="" class="d-flex justify-content-between"><span _ngcontent-fuj-c31="">500</span><span _ngcontent-fuj-c31="" class="text-start"> ( 100% ) 500 </span></div><div _ngcontent-fuj-c31="" class="progress my-1"><div _ngcontent-fuj-c31="" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar" role="progressbar" style="width: 100%;"></div></div><div _ngcontent-fuj-c31="" class="d-flex justify-content-between align-items-center"><span _ngcontent-fuj-c31="" class="order-price">7,065 ریال</span><span _ngcontent-fuj-c31=""><small _ngcontent-fuj-c31="" class="order-date text-muted">08:30:07 1398/12/17</small><!----><!----></span></div></div></div></div><!----><!----></div><div _ngcontent-fuj-c20="" class="d-order-list-item mb-2"><!----><div _ngcontent-fuj-c20="" d-order-list-item="" _nghost-fuj-c31=""><div _ngcontent-fuj-c31="" class="stock shadow-sm user-select-none buy" title="در حال ارسال به هسته معاملات"><div _ngcontent-fuj-c31="" class="py-2 px-2 position-relative"><!----><div _ngcontent-fuj-c31="" class="order-stock-symbol d-flex justify-content-between align-items-center mb-2"><div _ngcontent-fuj-c31="" class="d-flex mb-0"><!----><h6 _ngcontent-fuj-c31="" class="mb-0">گویان</h6></div><div _ngcontent-fuj-c31="" class="d-flex align-items-center pr-3"><span _ngcontent-fuj-c31="" class="mdi mdi-20px line-height-none mdi-check text-secondary"></span><div _ngcontent-fuj-c31="" class="stock-actions"><!----><!----><!----><span _ngcontent-fuj-c31="" class="icon mdi mdi-18px px-1 mdi-pencil-outline text-muted" title="ویرایش"></span><!----><span _ngcontent-fuj-c31="" class="icon mdi mdi-18px px-1 mdi-trash-can-outline text-muted" title="حذف"></span></div></div></div><div _ngcontent-fuj-c31="" class="d-flex justify-content-between"><span _ngcontent-fuj-c31="">100</span><span _ngcontent-fuj-c31="" class="text-start"> ( 0% ) 0 </span></div><div _ngcontent-fuj-c31="" class="progress my-1"><div _ngcontent-fuj-c31="" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar" role="progressbar" style="width: 0%;"></div></div><div _ngcontent-fuj-c31="" class="d-flex justify-content-between align-items-center"><span _ngcontent-fuj-c31="" class="order-price">4,380 ریال</span><span _ngcontent-fuj-c31=""><small _ngcontent-fuj-c31="" class="order-date text-muted">10:01:25 1398/12/17</small><!----><!----></span></div></div></div></div><!----><!----></div></div>
         # دخواست خرید
@@ -155,7 +155,7 @@ class EasyTraderScraperClass:
         ## مسیر رسیدن به پنجره
         ## <div _ngcontent-ojc-c20="" class="stocks flex-fill overflow-auto h-100">
         inputStr="//div[@class='stocks flex-fill overflow-auto h-100']"
-        rootElem = Chrome.driver.find_elements_by_xpath(inputStr)[0]
+        rootElem = self.chrome.driver.find_elements_by_xpath(inputStr)[0]
         self.buySellMenu['rootElem']=rootElem
         ## <order-form _ngcontent-ojc-c20="" _nghost-ojc-c30="">
         inputStr="//order-form"
@@ -253,12 +253,14 @@ class EasyTraderScraperClass:
         pass
 
     def fillBuySellForm(self, price, volume):
+        self.buySellMenu['volumeItemElem'].clear()
+        self.buySellMenu['priceItemElem'].clear()
         self.buySellMenu['volumeItemElem'].send_keys(volume)
         self.buySellMenu['priceItemElem'].send_keys(price)
         
     def DoneBuySellOperationNow(self):
         self.buySellMenu['sendButtonElem'].click()
-       
+
     def doOperationBuyAndSell(self):
         self.fillBuySellForm(1000, 50)
         self.DoneBuySellOperationNow()
@@ -268,27 +270,29 @@ class EasyTraderScraperClass:
         os.system('"w32tm /config /update /manualpeerlist:time.windows.com"')
         os.system('"w32tm /resync"')
 
+    #تست شود فوری
     def autoRobotBuyTheSymbol(self):
         def preLaunchOperation():
             self.openChrome()
             time.sleep(1)
             self.openEasyTraderInChrome()
             self.loginEasyTrader()
-            time.sleep(30)
+            time.sleep(60)
             self.Symbol="شگویا"
             self.focusOnSymbol()
             time.sleep(10)
             self.startBuySymbol()
             time.sleep(2)
             self.initializeBuyAndSellSymbol()
-            self.fillBuySellForm(4816, 2500)
+            self.fillBuySellForm(5011, 2500)
             
             self.doOperationAt_8_30_Time()
-        
+        print("AutoRobotMode 8:30")
         self.doOperation=preLaunchOperation
-        self.doOperationAt_Time(8,10,0,0.0)
+        self.doOperationAt_Time(8,22,00,0.0)
         
     def doOperationAt_8_30_Time(self):
+        import datetime
         try:
             pass
             self.syncWindowsTime()
@@ -296,9 +300,11 @@ class EasyTraderScraperClass:
             pass
         
         def clickBuy():
+            print(datetime.datetime.now())
             self.DoneBuySellOperationNow()
+            print(datetime.datetime.now())
         self.doOperation=clickBuy
-        self.doOperationAt_Time(8,30,0,0.0)
+        self.doOperationAt_Time(8,29,58,0.5)
         
     def doOperationAt_Time(self, hourTarget, minuteTarget, secondTarget, microSecondTarget):
         self.hourOffset=0
@@ -334,7 +340,7 @@ class EasyTraderScraperClass:
                     break
             print(seconds-secondsTarget)   
             timeNow = datetime.datetime.now()
-            if (self.doOperation()):
+            if (self.doOperation):
                 self.doOperation() 
             # print(timeNow)
             
@@ -385,11 +391,6 @@ class EasyTraderScraperClass:
     
     def efficiencyMonthSymbol(self):
         pass    
-    
-
-    
-    
-    
 
     def saveCookieToDB(self):
         pass

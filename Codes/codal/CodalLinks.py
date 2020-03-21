@@ -45,7 +45,6 @@ def getLinkOfSymbol(symbol):
         except:
             ErrorJson = True
             letter=[]
-            
 
         LinkOfPagesTable.insert_multiple(letters)
         #LinkOfPagesTable.all()['letters']

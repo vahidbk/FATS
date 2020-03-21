@@ -20,7 +20,7 @@ import json
 # end = 2000
 # start=end=543#DAbidi
 # start=end=790#shbehran
-print(json.dumps(updateGoldData(), indent = 4))
+#print(json.dumps(updateGoldData(), indent = 4))
 # #updateGroups()
 # updateCodalLetterLinks(start, end)
 # updateCodalSavePages(start, end)

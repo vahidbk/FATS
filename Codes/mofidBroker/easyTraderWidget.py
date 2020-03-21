@@ -15,8 +15,8 @@ class AppWindow(QDialog):
         
         def goldComputeWorker():
 
-            buttonList=[self.ui.pushButton_15, self.ui.pushButton_16, \
-                self.ui.pushButton_17,self.ui.pushButton_18, \
+            buttonList=[self.ui.pushButton_25, self.ui.pushButton_26, \
+                self.ui.pushButton_27,self.ui.pushButton_28, \
                 self.ui.pushButton_19, self.ui.pushButton_20, \
                 self.ui.pushButton_21, self.ui.pushButton_22, \
                 self.ui.pushButton_23,self.ui.pushButton_24]
@@ -61,6 +61,8 @@ class AppWindow(QDialog):
         
         self.ui.autoRobotBuyTheSymbolButton.clicked.connect(self.easyTraderScraper.autoRobotBuyTheSymbol)        
         
+        self.ui.onlinePlusBuyButton.clicked.connect(self.easyTraderScraper.onlinePlusBuy)        
+    
         
         self.show() 
         
